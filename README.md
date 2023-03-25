@@ -3,4 +3,5 @@
  I did the landing page
 ## In the week 02
  I am doing the HTML project
-
+ I create the index.html and develop the first section
+ 
