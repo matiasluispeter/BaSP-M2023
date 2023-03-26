@@ -1,59 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> radium rocket megarocket </title>
-</head>
-<body>
-    <header>
-        <img src="./img/LOGO-RR 1.jpg" alt="Logo de la empresa">
-        <ul>
-            <li><button>HOME </button></li>
-            <li><BUtton>SIGN UP</BUtton></li>
-            <li><button>LOG IN</button></li>
-            <li><button>CONTACT</button></li>
-        </ul>
-        <h2>other options</h2>
-        <h3>How can we help you?</h3>
-        <h3>Our history</h3>
-        <h3>Activities</h3>
-        <img src="./img/mail.png" alt="logo de casilla de correo">
-        <h4>info@rocket.com</h4>
-        <img src="./img/Combined Shape.png" alt="logo de casa">
-        <h4>Rosario, Argentina</h4>
-        <img src="./img/whatsapp.png" alt="logo de whatsapp">
-        <h4>(0000)000-000</h4>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Radium Rocket Megarocket </title>
+    </head>
+    <body>
+        <nav>
+            <img src="./img/logo-rr.jpg" alt="Logoship">
+            <ul>
+                <a href="#Presentation"><li><button>HOME</button></li></a>
+                <a href="#"><li><BUtton>SIGN UP</BUtton></li></a>
+                <a href="#"><li><button>LOG IN</button></li></a>
+                <a href="#Contact"><li><button>CONTACT</li></button></a>
+                </ul>
+            <h2>other options</h2>
+            <section id="Information">
+                <h3>How can we help you?</h3>
+                <h3>Our history</h3><a href="#"></a>
+                <h3>Activities</h3><a href="#"></a>
+                <img src="./img/mail.png" alt="mail logoship">
+                <a href="https://www.gmail.com/mail/help/intl/es/about.html?iframe"><h4>info@rocket.com</h4></a>
+                <img src="./img/logo-casa.png" alt="house logoship">
+                <a href="https://www.google.com.ar/maps/place/Rosario,+Santa+Fe/@-32.9520457,-60.7666799,12z/data=!3m1!4b1!4m6!3m5!1s0x95b6539335d7d75b:0xec4086e90258a557!8m2!3d-32.9587022!4d-60.6930416!16zL20vMDJ0YjE3"><h4>Rosario, Argentina</h4></a>
+                <img src="./img/whatsapp.png" alt="whatsapp logoship">
+                <a href="https://www.whatsapp.com/?lang=es"><h4>(0000)000-000</h4></a>
+            </section>
+        </nav>
+
+        <header>
         <h1>Radium Rocket Megarocket</h1>
-    </header>
-    <h2>the main reason of health</h2>
-        <p>
-            Component Body Maecenas interdum faucibus quam ac interdum. Donec facilisis vitae ipsum a ullamcorper.
-            Proin interdum suscipit velit. Nullam pulvinar efficitur sapien ac rhoncus. Aenean scelerisque, 
-            nisi at interdum laoreet, est nisi sagittis enim, nec eleifend justo orci quis nisl. Morbi fringilla
-            felis non ipsum dapibus, eget ornare tortor hendrerit. Curabitur ac eleifend orci. Donec condimentum 
-            ex non leo volutpat pretium. Cras aliquet quam quis semper egestas. Sed at ultricies turpis. Aenean cursus
-            porta eleifend.
-        </p>
+        </header>
+        <section id="Presentation">
+            <h2>THE MAIN REASON OF HEALTH</h2>
+            <p>
+                Component Body Maecenas interdum faucibus quam ac interdum. Donec facilisis vitae ipsum a ullamcorper.
+                Proin interdum suscipit velit. Nullam pulvinar efficitur sapien ac rhoncus. Aenean scelerisque, 
+                nisi at interdum laoreet, est nisi sagittis enim, nec eleifend justo orci quis nisl. Morbi fringilla
+                felis non ipsum dapibus, eget ornare tortor hendrerit. Curabitur ac eleifend orci. Donec condimentum 
+                ex non leo volutpat pretium. Cras aliquet quam quis semper egestas. Sed at ultricies turpis.
+                Aenean cursusporta eleifend.
+            </p>
         
-    <img src="./img/image 4.png" alt="">
-    <h2>how can we help you?</h2>
-    <img src="./img/image 5.png" alt="">
-    <ol>
-        <li><button>turn reservation</button></li>
-        <li><button>agent display</button></li>
-        <li><button>membership managment</button></li>
-        <li><button>contact and suggestion form</button></li>
-    </ol>
-    <h2>contact</h2>
-    <ol>
-        <li>name: <input type="insert your name"></li>
-        <li>surname: <input type="insert your surname"></li>
-        <li>e-mail: <input type="insert your e-mail"></li>
-    </ol>
+            <img src="./img/hombre-mujer.png" alt="picture of a men and women donig excercise">
+        </section>
+        <section id="How can help you?">
+            <h2>HOW CAN HELP YOU?</h2>
+            <img src="./img/hombre.png" alt="Picture of men arm">
+            <ul>
+                <li><button>Turn reservation</button></li><a href="#"></a>
+                <li><button>Agent display</button></li><a href="#"></a>
+                <li><button>Membership managment</button></li><a href="#"></a>
+                <li><button>Contact and suggestion form</button></li><a href="#"></a>
+            </ul>
+        </section>
+        <section id="Contact">
+            <h2>CONTACT</h2>
+            <img src="./img/mail.png" alt="mail logoship">
+            <form action="/contact">
+                <label for="fname">Name</label>
+                <input type="Insert your name" id="Name" name="fname" value="Insert your name">
+                <label for="lname">Last name</label>
+                <input type="Insert your last name" id="lname" name="lname" value="Insert your surname">
+                <label for="E-mail">E-mail</label>
+                <input type="insert your e-mail" id="E-mail" name="E-mail" value="insert your e-mail">
+            </form>
+            <h3>Reason for contact</h3>
+            <form>
+                <input type="radio" name="Reason for contact" value="query">
+                <label>I want to make a query or suggestion</label>
+                <input type="radio" name="Reason for contact" value="claim">
+                <label>I want to make a claim</label>
+                <input type="radio" name="Reason for contact" value="membrships and costs">
+                <label>I want to know the memberships and costs</label>
+            </form>
+            <h3>Message</h3>
+            <input type="text" name="message" value="type your message here">
+            <form>
+                <input type="button" name="send message" value="send message">
+                <input type="button" name="reset" value="reset">   
+            </form>
+        </section id="Our history">
+            <h2>OUR HISTORY</h2>
+            <img src="./img/mujer-mancuerna.png" alt="Women with a dumbbell">
+            <p>
+                Quisque pellentesque lacus metus, sodales tempor leo tincidunt ut.
+                Curabitur quis elit ut lectus vehicula rutrum eu at sem. Nam eget quam mi. 
+                Donec gravida metus ante, eget vulputate nibh posuere nec. Donec iaculis consequat
+                neque at vulputate. Nulla tincidunt diam justo, eget facilisis nibh porttitor id.
+                Suspendisse rhoncus elit non dapibus ullamcorper. Proin in tempor quam. Nulla in eros est.
+            </p>
 
-<a href=""></a>
-
-</body>
+    </body>
 </html>
+        
