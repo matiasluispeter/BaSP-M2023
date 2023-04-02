@@ -1,208 +1,241 @@
-aside{
-    background-color: #AACE9B;
-    float: left;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    width: 20%;
-    position: fixed;
-}
 
 body{
-    background-color: rgba(255, 255, 255, 1);
-    ;
-    float: right;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    width: 80%;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-aside button{
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 23px;
-    letter-spacing: 0em;
-    text-align: left;
-    background-color: #EBECF0;
-    color:#373867;
-    height: 69.96991729736328px;
-    width: 205px;
-    left: 40px;
-    top: 202.9970703125px;
-    border-radius: 5px;
-    border: 1px solid #373867;
-    padding: 14px 36px 14px 36px;
-}
-ul{
-    list-style: none;
-}
-#rr {
+header{
     position: absolute;
-    width: 95px;
-    height: 140px;
-    left: 95px;
-    top: 20px;
-    background: "./img/logo-rr.jpg";
-}
-
-#home{
-    position:absolute;
-    left: 40px;
-    top: 203px;
-    height: 69.97px;
-    width: 205px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 35px;
-    text-align: center;
-    color: white;
+    height: 135px;
+    width: 80%;
+    left: 20%;
     background-color: #373867;
 }
-#sign-up{
-    position:absolute;
-    top: 314.13px;
-    height: 69.97px;
-    left: 40px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-}
-
-#log-in{
-    position:absolute;
-    top: 425.25px;
-    height: 69.97px;
-    left: 40px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-}
-
-#contact{
-    position:absolute;
-    top: 536.38px;
-    height: 69.97px;
-    left: 40px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-}
-#other{
+header h1{
     position: absolute;
+    display: inline-block;
+    height: 45px;
+    width: 485px;
+    left: 310px;
+    top: 35px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: rgba(170, 206, 155, 1);
+}
+
+aside{
+    background-color: #AACE9B;
+    width: 20%;
+    position:fixed;
+    height: 100%;
+    text-align: center;
+    display: block;
+}
+.rr-logoship{
+    position: absolute;
+    height: 45px;
+    width: 233px;
+    left: 50px;
+    top: 45px;
+   
+}
+.radium{
+    margin-left: 95px;
+    margin-top: 43px;
+    margin-bottom: 40px;
+    margin: 105px;
+    height: 140px;
+    width: 95px;
+    vertical-align: middle;
+}
+.aside-button{
+    background-color: #EBECF0;
+    color:#373867;
+    height: 70px;
+    width: 205px;
+    border-radius: 5px;
+    padding: 14px 36px 14px 36px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    border: 1px solid #373867;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 40px;
+    display: block;
+    box-sizing: border-box;
+}
+aside ul li{
+    margin-bottom: 10px;
+    text-align: center;   
+}
+a{
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+}
+.home{
+    font-weight: 700;
+    font-size: 30px;
+    color:white;
+    background-color: #373867;
+}
+.other{
+    margin: 10px, 10px, 10px, 10px;
     height: 85px;
     width: 255px;
-    left: 29px;
-    top: 642px;
-    border-radius: nullpx;
-    font-family: Roboto;
+    margin-left: 29px;
+    margin-top: 700px;
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
-    letter-spacing: 0em;
     text-align: center;
     color:rgba(55, 56, 103, 1);
-
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
-
-#help{
-    position:absolute;
-    top: 691.99px;
+.help{
+    margin-top: 750px;
     height: 71px;
-    left: 36px;
+    margin-left: 36px;
     width: 215px;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 23px;
+    text-align: left;
+}
+.help a{
+    text-decoration: none;
+    color: #373867;
+}
+.logoships-aside{
+    margin: 10px, 10px, 10px, 10px;
+    display: inline-block;
+    height: 23px;
+    width: 50%;
+    margin-left: 36px;
+    margin-top: 821px;
+    text-align: left;
+    padding: 14px 36px 14px 36px;
+    color: #373867;
+}
+.prueba li a{
+    text-decoration: none;
     text-align: center;
     color: #373867;
 }
-#our{
-    position:absolute;
-    top: 726.99px;
-    height: 34.98px;
-    left: 36px;
-    width: 164px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-    color: #373867;
+.prueba li a img{
+    padding: 10px;
+    vertical-align: middle;
 }
-#activities{
-    position:absolute;
-    top: 761.99px;
-    height: 36.01x;
-    left: 36px;
-    width: 144px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-    color: #373867;
-}
-#info{
+
+main{
     position: absolute;
-    height: 215px;
-    width: 243px;
-    left: 26px;
-    top: 790px;
+    top: 135px;
+    right: 0px;
+    width: 80%;
+    height: 100%;
 }
+#presentation h2{
+    position: absolute;
+    height: 59px;
+    width: 480px;
+    left: 68px;
+    top: 68px;
+    color: #373867;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: left;
 
-#mail{
-    height: 23.386180877685547px;
-    width: 28.583335876464844px;
-    left: 10.20849609375px;
-    top: 12.25px;
+}
+#presentation p{
+    position: absolute;
+    height: 287px;
+    width: 431px;
+    left: 74px;
+    top: 141px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    color: #373867;
+}
+#presentation img{
+    display: block;
+    margin-left: 434px;
+    height: 684px;
+    width: 810px;
+    left: 729px;
+    top: 226px;
     border-radius: 0px;
 }
 
-#inforocket{
-    height: 34.98561477661133px;
-    width: 164px;
-    left: 52px;
-    top: 16px;
-    border-radius: nullpx;
+.fondo{
+    background-image: url("../img/hombre.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 876px;
+    width: 1122px;
+    margin-left: 71px;
+    margin-top: 40px;
+}
+.h2-howcanwehelpyou{
+    position: absolute;
+    margin-top: 124px;
+    margin-left: 284px;
+    height: 52px;
+    width: 490px;
+    size: 40px;
+    vertical-align: middle;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    text-align: center;
+    color: white;
+}
+.how-can-we-help-you li{
+    position: absolute;
+    height: 107px;
+    width: 370px;
+    border-radius: 5px;
+    padding: 14px 36px 14px 36px;
+    background-color: rgba(235, 236, 240, 1);
+    color: #373867;
+    box-sizing: border-box;
+    border: 1px solid #373867 ;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+    vertical-align: middle;
+    text-align: center;
+}
+.how-can-we-help-you li:nth-child(1){
+    margin-left: 75px;
+    margin-top: 267px; 
+    padding-top: 35px;
+}
+.how-can-we-help-you li:nth-child(2){
+    margin-left: 77px;
+    margin-top: 556px;
+    padding-top:35px;
+    padding-left: 65px;
+}
+.how-can-we-help-you li:nth-child(3){
+    margin-left: 606px;
+    margin-top: 267px;
+}
+.how-can-we-help-you li:nth-child(4){
+    margin-left: 606px;
+    margin-top: 556px;
 }
 
-#house{
-    height: 17.149999618530273px;
-    width: 11.433332443237305px;
-    left: 18.78369140625px;
-    top: 22.458984375px;
-    border-radius: 0px;
-    
-}
-#rosario{
-    height: 35px;
-    width: 184px;
-    left: 52px;
-    top: 65px;
-    border-radius: nullpx;
-}
-#watssapp{
-    height: 45px;
-    width: 45px;
-    left: -2px;
-    top: 110px;
-    border-radius: 0px;
-}
-#cel
-{
-    height: 35px;
-    width: 184px;
-    left: 52px;
-    top: 125px;
-    border-radius: nullpx;
-}
+
+
+
+
