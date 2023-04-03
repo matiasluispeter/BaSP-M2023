@@ -103,36 +103,44 @@
                 </div>
             </section>
             <section id="Contact">
-                <h2>CONTACT</h2>
-                <img src="./img/mail.png" alt="mail logoship">
-                <form action="/contact">
-                    <label for="fname">
+                <h2 class="contact1">CONTACT</h2>
+                <img src="./img/mail.png" alt="mail logoship" class="mail-logo">
+                <form action="/contact" class="form">
+                    <label for="fname" class="fname">
                         Name
+                        <input type="Insert your name" id="Name" name="fname" value="Insert your name" class="form">
                     </label>
-                    <input type="Insert your name" id="Name" name="fname" value="Insert your name">
-                    <label for="lname">
+                    <label for="lname" class="fname">
                         Last name
+                        <input type="Insert your last name" id="lname" name="lname" value="Insert your surname" class="form">
                     </label>
-                    <input type="Insert your last name" id="lname" name="lname" value="Insert your surname">
-                    <label for="E-mail">
+                    <label for="E-mail" class="fname">
                         E-mail
+                        <input type="insert your e-mail" id="E-mail" name="E-mail" value="insert your e-mail" class="form">
                     </label>
-                    <input type="insert your e-mail" id="E-mail" name="E-mail" value="insert your e-mail">
-                    <h3>Reason for contact</h3>
-                    <input type="radio" name="Reason for contact" value="query">
-                    <label>I want to make a query or suggestion</label>
-                    <input type="radio" name="Reason for contact" value="claim">
-                    <label>I want to make a claim</label>
-                    <input type="radio" name="Reason for contact" value="membrships and costs">
-                    <label>I want to know the memberships and costs</label>
-                <h3>Message</h3>
-                <textarea type="text" name="message" value="type your message here">
-                <button>
-                    <input type="submit">
-                </button>
-                <button>
-                    <input type="reset">
-                </button>
+                    <h3 class="reason">Reason for contact:</h3>
+                    <ul class="radio">
+                        <li>
+                        <input type="radio" name="Reason for contact" value="query">
+                        <label>I want to make a query or suggestion</label>
+                        </li>
+                        <li>
+                        <input type="radio" name="Reason for contact" value="claim">
+                        <label>I want to make a claim</label>
+                        </li>
+                        <li>
+                        <input type="radio" name="Reason for contact" value="membrships and costs">
+                        <label>I want to know the memberships and costs</label>
+                        </li>
+                    </ul>
+                <label for="message"><h3 class="message">Message</h3></label>
+                <p><textarea>name="type your message here"</textarea></p>
+                
+                    <input type="submit" class="submit">
+    
+    
+                    <input type="reset" class="reset">
+            
                 </form>
             </section>
             <section id="Our history">
