@@ -2,14 +2,14 @@
 body{
  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-header{
+.header{
     position: absolute;
     height: 135px;
     width: 80%;
     left: 20%;
     background-color: #373867;
 }
-header h1{
+.header h1{
     position: absolute;
     display: inline-block;
     height: 45px;
@@ -23,14 +23,11 @@ header h1{
     text-align: right;
     color: rgba(170, 206, 155, 1);
 }
-
 aside{
     background-color: #AACE9B;
     width: 20%;
     position:fixed;
     height: 100%;
-    text-align: center;
-    display: block;
 }
 .rr-logoship{
     position: absolute;
@@ -42,12 +39,10 @@ aside{
 }
 .radium{
     margin-left: 95px;
-    margin-top: 43px;
-    margin-bottom: 40px;
-    margin: 105px;
+    margin-top: 20px;
     height: 140px;
     width: 95px;
-    vertical-align: middle;
+
 }
 .aside-button{
     background-color: #EBECF0;
@@ -63,6 +58,7 @@ aside{
     text-align: center;
     line-height: 40px;
     margin-left: 40px;
+    margin-top: 43px;
     display: block;
     box-sizing: border-box;
 }
@@ -83,8 +79,8 @@ a{
 }
 .other{
     margin: 10px, 10px, 10px, 10px;
-    height: 85px;
-    width: 255px;
+    height: 40px;
+    width: 239px;
     margin-left: 29px;
     margin-top: 700px;
     font-size: 30px;
@@ -93,43 +89,46 @@ a{
     text-align: center;
     color:rgba(55, 56, 103, 1);
     margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 20px;
+    margin-left: 40px;
 }
-.help{
-    margin-top: 750px;
-    height: 71px;
+.preguntas{
     margin-left: 36px;
-    width: 215px;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 23px;
     text-align: left;
+    color: #373867;
+    display: block;
 }
 .help a{
     text-decoration: none;
     color: #373867;
 }
 .logoships-aside{
-    margin: 10px, 10px, 10px, 10px;
     display: inline-block;
     height: 23px;
-    width: 50%;
-    margin-left: 36px;
-    margin-top: 821px;
+    width: 230px;
+    margin-top: 10px;
     text-align: left;
-    padding: 14px 36px 14px 36px;
     color: #373867;
+    margin-left: 34.91px;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 600;
 }
 .prueba li a{
     text-decoration: none;
     text-align: center;
     color: #373867;
+    display: inline-block;
 }
 .prueba li a img{
     padding: 10px;
     vertical-align: middle;
+}
+.prueba li:nth-child(3){
+    margin-left: -35px;
 }
 
 main{
@@ -138,6 +137,10 @@ main{
     right: 0px;
     width: 80%;
     height: 100%;
+}
+.section{
+    width: 1271px;
+    height: 847px;
 }
 #presentation h2{
     position: absolute;
@@ -161,7 +164,6 @@ main{
     font-size: 20px;
     font-weight: 600;
     line-height: 23px;
-    letter-spacing: 0em;
     color: #373867;
 }
 #presentation img{
@@ -234,6 +236,12 @@ main{
     margin-left: 606px;
     margin-top: 556px;
 }
+#Contact{
+    height: 1000px;
+    position: relative;
+    bottom: 200px;
+    margin-bottom: 100px;
+}
 .contact1{
     height: 59px;
     width: 431px;
@@ -243,7 +251,6 @@ main{
     font-size: 40px;
     font-weight: 700;
     line-height: 47px;
-    letter-spacing: 0em;
     text-align: left;
     display: inline-block;
     color: #373867;
@@ -261,10 +268,6 @@ main{
     font-weight: 700;
     line-height: 35px;
     color: #373867;
-    /*
-    height: 55px;
-    width: 190px;
-    */
 }
 .fname input{
     height: 45px;
@@ -304,12 +307,6 @@ main{
     border-radius: 20px;
     border: 1px solid rgba(55, 56, 103, 1)
 }
-
-    
-
-
-
-
 .reason{
     color: #373867;
     margin-top: 32px;
@@ -342,9 +339,7 @@ main{
     height: 35px;
     width: 498px;
 }
-
 .message{
-
     margin-left: 79px;
     margin-top: 78px;
     margin-bottom: 15px;
@@ -373,9 +368,7 @@ textarea {
     font-size: 16px;
     font-weight: 500;
     line-height: 19px;
-    text-align: center;
-
-    
+    text-align: center;  
 }
 .reset{
     height: 46px;
@@ -389,8 +382,91 @@ textarea {
     font-weight: 500;
     line-height: 19px;
     text-align: left;
+}
+.line{
+    height: 5px;
+    width: 1019px;
+    margin-left: 79px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgba(55, 56, 103, 1);
+}
+.our-history{
+    margin-top: 48px;
+    margin-left: 47px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    text-align: left;
+    color: #373867;
+}
+.dumbeel{
+    background-image: url("../img/mujer-mancuerna.png");
+   height: 800px;
+   margin: 47px;
+   position:relative;
+   text-align: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.text-dumbeel{
+    position: absolute;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    top: 28%;
+    left: 20%;
+    width: 70%;
+    color:rgba(255, 255, 255, 1);
+}
+#activities{
+    display: inline-block;
+    height: 110px; 
+    vertical-align: middle;
+    margin-left: 50px;
 
-
+}
+.act{
+    margin-left: 99px;
+    margin-top: 48px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    text-align: left;
+    color: #373867;  
+}
+.lista-act{
+    color: #373867;
+    margin-left: 99px;
+    margin-top: 25px;
+    vertical-align: top;
+}
+.lista-act img{
+    margin-left: 91px;
+    margin-top: 15px;
+    height: 101px;
+    width: 117px;
+    
+}
+.lista-act a{
+    margin-top: 15px;
+    margin-left: 81px;
+    height: 101px;
+    width: 200px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: left;
+    color: #373867;
+}
+/*
+.footer{
+    position: absolute;
+    height: 135px;
+    width: 80%;
+    left: 20%;
+    background-color: #373867;
 }
 
 

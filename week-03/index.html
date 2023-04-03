@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <header>
+        <header class="header">
             <img src="./img/LOGO-RR 2 1.png" alt="Radium Rocket logoship" class="rr-logoship">
             <h1>MEGAROCKET</h1>
         </header>
@@ -38,12 +38,11 @@
                         </a>
                     </li>
                 </ul>
-                <p class="other">OTHER OPTIONS</p>    
-                <div class="help">
-                <a href="#h">How can we help you?</a>
-                <a href="#Our history"><h3>Our history</h3></a>
-                <a href="#activities and memberships"><h3>Activities</h3></a>
-                </div>
+                <p class="other">OTHER OPTIONS</p>
+           
+                    <a href="#h" class="preguntas">How can we help you?</a>
+                    <a href="#Our history" class="preguntas">Our history</a>
+                    <a href="#activities and memberships" class="preguntas">Activities</a>
             </nav>
             <div class="logoships-aside">
             <ul id="info" class="prueba">
@@ -69,7 +68,9 @@
             </div>
         </aside>
         <main>
-            <section id="presentation">
+            <div class="line">
+            </div>
+            <section id="presentation" class="section">
                 <h2>THE MAIN REASON OF HEALTH</h2>
                 <p>
                     Component Body Maecenas interdum faucibus quam ac interdum. Donec facilisis vitae ipsum a ullamcorper.
@@ -100,6 +101,8 @@
                             <p>CONTACT AND SUGGESTION FORM</p>
                         </li>
                     </ul>
+                </div>
+                <div class="line">
                 </div>
             </section>
             <section id="Contact">
@@ -134,60 +137,82 @@
                         </li>
                     </ul>
                 <label for="message"><h3 class="message">Message</h3></label>
-                <p><textarea>name="type your message here"</textarea></p>
-                
+                <textarea>name="type your message here"</textarea>
                     <input type="submit" class="submit">
-    
-    
                     <input type="reset" class="reset">
-            
                 </form>
             </section>
+            <div class="line"></div>
+    
             <section id="Our history">
-                <h2>OUR HISTORY</h2>
-                <img src="./img/mujer-mancuerna.png" alt="Women with a dumbbell">
-                <p>
-                    Quisque pellentesque lacus metus, sodales tempor leo tincidunt ut.
-                    Curabitur quis elit ut lectus vehicula rutrum eu at sem. Nam eget quam mi. 
-                    Donec gravida metus ante, eget vulputate nibh posuere nec. Donec iaculis consequat
-                    neque at vulputate. Nulla tincidunt diam justo, eget facilisis nibh porttitor id.
-                    Suspendisse rhoncus elit non dapibus ullamcorper. Proin in tempor quam. Nulla in eros est.
-                </p>
+            
+                <h2 class="our-history">OUR HISTORY</h2>
+                <div class="dumbeel">
+                    <p class="text-dumbeel">
+                        Quisque pellentesque lacus metus, sodales tempor
+                        leo tincidunt ut. Curabitur quis elit ut lectus
+                        vehicula rutrum eu at sem. Nam eget quam mi. 
+                        Donec gravida metus ante, eget vulputate nibh posuere nec.
+                        Donec iaculis consequatneque at vulputate. Nulla tincidunt
+                        diam justo, eget facilisis nibh porttitor id. Suspendisse
+                        rhoncus elit non dapibus ullamcorper. Proin in tempor quam.
+                        Nulla in eros est.
+                    </p>
+                </div> 
             </section>
+            <div class="line">
+            </div>
             <section id="activities and memberships">
-                <h2>ACTIVITIES</h2>
-                <ul>
-                    <li><a href="crossfit">Crossfit</a><img src="img/mancuerna.png" alt="dumbbell"></li>
-                    <li><a href="fitness">Fitness</a><img src="img/brazo.png" alt="arm"></li>
-                    <li><a href="spinning">spinning</a><img src="img/spining.png" alt="stationary bike"></li>
-                    <li><a href="functional">Functional</a><img src="img/functional.png" alt="functional machine"></li>
-                    <li><a href="box">Box</a><img src="img/box.png" alt="boxing glove"></li>
-                </ul>
-                <h2>MEMBERSHIPS TYPES</h2>
-                <img src="img/black.png" alt="shield"></a>
-                <h3>Black membership</h3>
-                <ul>
-                    <li>Free access to the weight room</li>
-                    <li>Free access to classes prior</li>
-                    <li>Registration</li>
-                    <li>Personalized monitoring by coach</li>
-                    <li>Grid display</li>
-                </ul>
-                <img src="img/classic.png" alt="ray"></a>
-                <h3>Classic membership</h3>
-                <ul>
-                    <li>Free access to the weight room</li>
-                    <li>Personalized monitoring by coach</li>
-                    <li>Grid display</li>
-                </ul>
-                <img src="img/only.png" alt="Heart"></a>
-                <ul>
-                    <li>Free access to the weight room</li>
-                    <li>Grid display</li>
-                </ul>
+                <ul class="fname">
+                    <li><h2 class="act">ACTIVITIES</h2></li>
+                        <ul class="lista-act">
+                            <li> 
+                                <img src="img/mancuerna.png" alt="dumbbell">
+                                <a href="crossfit">Crossfit</a>
+                            </li>
+                            <li>
+                                <img src="img/brazo.png" alt="arm">
+                                <a href="fitness">Fitness</a>
+                            </li>
+                            <li>
+                                <img src="img/spining.png" alt="stationary bike">
+                                <a href="spinning">spinning</a>
+                            </li>
+                            <li></li>
+                                <img src="img/functional.png" alt="functional machine"></li>
+                                <a href="functional">Functional</a>
+                            <li>
+                                <img src="img/box.png" alt="boxing glove">
+                                <a href="box">Box</a>
+                            </li>
+                        </ul>
+                
+                    <li><h2>MEMBERSHIPS TYPES</h2></li>
+                        <img src="img/black.png" alt="shield"></a>
+                        <h3>Black membership</h3>
+                        <ul>
+                            <li>Free access to the weight room</li>
+                            <li>Free access to classes prior</li>
+                            <li>Registration</li>
+                            <li>Personalized monitoring by coach</li>
+                            <li>Grid display</li>
+                        </ul>
+                        <img src="img/classic.png" alt="ray"></a>
+                        <h3>Classic membership</h3>
+                        <ul>
+                            <li>Free access to the weight room</li>
+                            <li>Personalized monitoring by coach</li>
+                            <li>Grid display</li>
+                        </ul>
+                        <img src="img/only.png" alt="Heart"></a>
+                        <ul>
+                            <li>Free access to the weight room</li>
+                            <li>Grid display</li>
+                        </ul>
+                </div>
             </section>
         </main>
-        <footer>
+        <footer class="footer">
             <small>
             Copyright © 2022 Radium Rocket. All rights reserved
             </small>
