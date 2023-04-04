@@ -11,7 +11,7 @@
     <body>
         <header class="header">
             <img src="./img/LOGO-RR 2 1.png" alt="Radium Rocket logoship" class="rr-logoship">
-            <h1>MEGAROCKET</h1>
+            <h1>MEGAROCKET S.A</h1>
         </header>
         <aside class="aside"> 
             <img class="radium" src="./img/logo-rr.png" alt="Logoship">
@@ -40,12 +40,12 @@
                 </ul>
                 <p class="other">OTHER OPTIONS</p>
            
-                    <a href="#h" class="preguntas">How can we help you?</a>
-                    <a href="#Our history" class="preguntas">Our history</a>
-                    <a href="#activities and memberships" class="preguntas">Activities</a>
+                    <a href="#h" class="questions">How can we help you?</a>
+                    <a href="#Our history" class="questions">Our history</a>
+                    <a href="#activities-memberships" class="questions">Activities</a>
             </nav>
             <div class="logoships-aside">
-            <ul id="info" class="prueba">
+            <ul id="info" class="links">
                 <li>
                     <a href="info@rocket.com"> 
                         <img src="./img/mail.png" alt="mail logoship">
@@ -83,7 +83,7 @@
             </section>
             <div class="line"></div>
             <section id="h" class="section">
-                <div class="fondo">
+                <div class="background">
                     <h2 class="h2-howcanwehelpyou">HOW CAN WE HELP YOU?</h2>
                     <ul class="how-can-we-help-you">
                         <li>
@@ -105,45 +105,44 @@
             <section id="Contact" class="section">
                 <h2 class="contact1">CONTACT</h2>
                 <img src="./img/mail.png" alt="mail logoship" class="mail-logo">
-                <form action="/contact" class="form">
-                    <label for="fname" class="fname">
+                <form>
+                    <label for="Name" class="fname">
                         Name
-                        <input type="Insert your name" id="Name" name="fname" value="Insert your name" class="form">
+                        <input type="Insert your name" id="Name" name="fname" value="Insert your name">
                     </label>
                     <label for="lname" class="fname">
                         Last name
-                        <input type="Insert your last name" id="lname" name="lname" value="Insert your surname" class="form">
+                        <input type="Insert your last name" id="lname" name="lname" value="Insert your surname">
                     </label>
                     <label for="E-mail" class="fname">
                         E-mail
-                        <input type="insert your e-mail" id="E-mail" name="E-mail" value="insert your e-mail" class="form">
+                        <input type="insert your e-mail" id="E-mail" name="E-mail" value="insert your e-mail">
                     </label>
                     <h3 class="reason">Reason for contact:</h3>
                     <ul class="radio">
                         <li>
-                        <input type="radio" name="Reason for contact" value="query">
-                        <label>I want to make a query or suggestion</label>
+                        <input type="radio" id="make-query" name="make-query" value="query">
+                        <label for="make-query">I want to make a query or suggestion</label>
                         </li>
                         <li>
-                        <input type="radio" name="Reason for contact" value="claim">
-                        <label>I want to make a claim</label>
+                        <input type="radio" id= "claim" name="Reason for contact" value="claim">
+                        <label for="claim">I want to make a claim</label>
                         </li>
                         <li>
-                        <input type="radio" name="Reason for contact" value="membrships and costs">
-                        <label>I want to know the memberships and costs</label>
+                        <input type="radio" id="memberships" name="Reason for contact" value="membrships and costs">
+                        <label for="memberships">I want to know the memberships and costs</label>
                         </li>
                     </ul>
-                <label for="message"><h3 class="message">Message</h3></label>
-                <textarea>name="type your message here"</textarea>
-                    <input type="submit" class="submit">
-                    <input type="reset" class="reset">
+                    <label for="message"><h3 class="message">Message</h3></label>
+                    <textarea>name="type your message here"</textarea>
+                    <div class="buttoms">
+                        <input type="submit" class="submit" id="submit">
+                        <input type="reset" class="reset" id="reset">
+                    </div> 
                 </form>
             </section>
-
             <div class="line"></div>
-    
             <section id="Our history" class="section">
-            
                 <h2 class="our-history">OUR HISTORY</h2>
                 <div class="dumbeel">
                     <p class="text-dumbeel">
@@ -161,7 +160,7 @@
             <div class="line">
             </div>
             
-            <section id="activities-memberships" class="last-section">
+            <section id="activities-memberships" class="section">
                 <article class="activities">
                     <h2>ACTIVITIES</h2>
                         <ul class="lista-act">
@@ -226,7 +225,7 @@
                         
                     </article>
                 </section>
-            </main>
+        </main>
         <footer class="footer">
             <small>
                 Copyright © 2022 Radium Rocket. All rights reserved
