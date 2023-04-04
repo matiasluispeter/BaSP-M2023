@@ -3,47 +3,75 @@ body{
  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.header{
-    position: absolute;
-    height: 135px;
-    width: 80%;
-    left: 20%;
-    background-color: #373867;
-}
-
-.rr-logoship{
-    position: absolute;
-    height: 45px;
-    width: 233px;
-    left: 50px;
-    top: 45px;
-
-}
-
-.header h1{
-    position: absolute;
-    display: inline-block;
-    margin-left: 150px;
-    height: 45px;
-    width: 485px;
-    left: 310px;
-    top: 35px;
-    color: rgba(170, 206, 155, 1);
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 47px;
-    letter-spacing: 0em;
-    text-align: right;
-    
-}
-
 aside{
     position: fixed;
     width: 20%;
     height: 100%;
     bottom: 0%;
     background-color: #AACE9B;
+}
 
+aside ul li{
+    margin-bottom: 10px;
+    text-align: center;   
+}
+
+a{
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+}
+
+main{
+    top: 135px;
+    right: 0px;
+    width: 80%;
+    height: 100%;
+}
+
+footer{
+    display: inline-block;
+    width: 80%;
+    margin-left: 20%;
+    height: 150px;
+    background-color: #373867;   
+}
+
+.header{
+    position: relative;
+    height: 135px;
+    width: 80%;
+    margin-left: 20%;
+    background-color: #373867;
+}
+
+.section{
+    position: relative;
+    margin-left: 600px;
+    margin-bottom: 200px;
+    top: 135px;
+    width: 80%;
+}
+
+.rr-logoship{
+    position: relative;
+    height: 45px;
+    width: 233px;
+    margin-left: 50px;
+    margin-top: 45px;
+}
+
+.header h1{
+    position: relative;
+    display: inline-block;
+    margin-left: 100px;
+    width: 485px;
+    color: rgba(170, 206, 155, 1);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: right; 
 }
 
 .radium{
@@ -51,7 +79,6 @@ aside{
     margin-top: 20px;
     height: 140px;
     width: 95px;
-
 }
 
 .aside-button{
@@ -71,25 +98,16 @@ aside{
     text-align: center;
     line-height: 40px;
     box-sizing: border-box;
-    
 }
 
-aside ul li{
-    margin-bottom: 10px;
-    text-align: center;   
-}
 
-a{
-    text-decoration: none;
-    vertical-align: middle;
-    text-align: center;
-}
 .home{
     font-weight: 700;
     font-size: 30px;
     color:white;
     background-color: #373867;
 }
+
 .other{
     margin-top: 10px;
     margin-left: 40px;
@@ -99,8 +117,7 @@ a{
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
-    text-align: center;
- 
+    text-align: center; 
 }
 
 .questions{
@@ -112,14 +129,14 @@ a{
     font-size: 20px;
     line-height: 23px;
     text-align: left;
-  
 }
 
 .help a{
     text-decoration: none;
     color: #373867;
 }
-.logoships-aside{
+
+.links{
     display: inline-block;
     margin-top: 10px;
     margin-left: 34.91px;
@@ -131,34 +148,23 @@ a{
     font-weight: 600;
     text-align: left;
 }
+
 .links li a{
     display: inline-block;
     color: #373867;
     text-decoration: none;
-    text-align: center;
-   
+    text-align: center;   
 }
+
 .links li a img{
     padding: 10px;
     vertical-align: middle;
 }
+
 .links li:nth-child(3){
     margin-left: -35px;
 }
 
-main{
-    top: 135px;
-    right: 0px;
-    width: 80%;
-    height: 100%;
-}
-.section{
-    position: relative;
-    margin-left: 600px;
-    margin-bottom: 200px;
-    top: 135px;
-    width: 80%;
-}
 #presentation h2{
     position: absolute;
     left: 68px;
@@ -170,8 +176,8 @@ main{
     font-weight: 700;
     line-height: 35px;
     text-align: left;
-
 }
+
 #presentation p{
     position: absolute;
     height: 287px;
@@ -182,7 +188,6 @@ main{
     font-size: 20px;
     font-weight: 600;
     line-height: 23px;
-    
 }
 
 #presentation img{
@@ -192,10 +197,9 @@ main{
     margin-left: 434px;
     height: 684px;
     width: 810px;
-  
 }
 
-.background{
+#h{
     margin-top: 40px;
     background-image: url("../img/hombre.png");
     background-repeat: no-repeat;
@@ -203,6 +207,7 @@ main{
     height: 1000px;
     width: 1094px;
 }
+
 .h2-howcanwehelpyou{
     position: absolute;
     margin-top: 124px;
@@ -217,6 +222,7 @@ main{
     text-align: center;
     color: white;
 }
+
 .how-can-we-help-you li{
     position: absolute;
     height: 107px;
@@ -235,30 +241,34 @@ main{
     vertical-align: middle;
     text-align: center;
 }
+
 .how-can-we-help-you li:nth-child(1){
     margin-left: 75px;
     margin-top: 267px; 
     padding-top: 35px;
 }
+
 .how-can-we-help-you li:nth-child(2){
     margin-left: 77px;
     margin-top: 556px;
     padding-top:35px;
     padding-left: 65px;
 }
+
 .how-can-we-help-you li:nth-child(3){
     margin-left: 606px;
     margin-top: 267px;
 }
+
 .how-can-we-help-you li:nth-child(4){
     margin-left: 606px;
     margin-top: 556px;
 }
+
 .contact1{
     position: absolute;
     height: 59px;
     width: 431px;
-    
     margin-bottom: 0px;
     font-size: 40px;
     font-weight: 700;
@@ -267,10 +277,12 @@ main{
     display: inline-block;
     color: #373867;
 }
+
 .mail-logo{
     margin-top: 11px;
     margin-left: 295px;
 }
+
 .fname{
     display: block;
     
@@ -280,8 +292,8 @@ main{
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
-
 }
+
 .fname input{
     margin-left: 260px;
     margin-top: 141px;
@@ -304,8 +316,8 @@ main{
     width: 293px;
     border-radius: 20px;
     border: 1px solid rgba(55, 56, 103, 1)
-
 }
+
 .fname:nth-child(2) input{
     margin-left: 200px;
     margin-top: 0px;
@@ -373,7 +385,7 @@ textarea {
     height: 100px;
     width: 800px;
     padding: 40px;
-    color: rgba(52, 99, 110, 1);
+    border-color: rgba(52, 99, 110, 1);
 }
 
 .buttoms{
@@ -409,7 +421,7 @@ textarea {
 
 .line{
     position: absolute;
-    margin-left: 600px;
+    margin-left: 650px;
     margin-top: 10px;
     margin-bottom: 10px;
     height: 5px;
@@ -417,7 +429,7 @@ textarea {
     background: rgba(55, 56, 103, 1);
 }
 
-.our-history{
+#Our-history h2{
     margin-top: 48px;
     color: #373867;
     font-size: 40px;
@@ -445,14 +457,6 @@ textarea {
     font-weight: 700;
     line-height: 35px;
     text-align: center;
-}
-    
-.last-section{
-    position: relative;
-    width: 80%;
-    top: 135px;
-    margin-left: 600px;
-    margin-bottom: 436px;
 }
 
 #activities-memberships article{
@@ -489,7 +493,6 @@ textarea {
     display: inline-block;
     color: black; 
     vertical-align: middle;
-
 }
 
 .memberships h2{
@@ -504,8 +507,7 @@ textarea {
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
-    text-align: left; 
-        
+    text-align: left;        
 }
 
 .memberships-list{
@@ -518,7 +520,6 @@ textarea {
     font-weight: 600;
     line-height: 23px;
     text-align: left;
-    
 }
 
 .memberships-img{
@@ -526,27 +527,26 @@ textarea {
     margin-bottom: 80px;
 }
 
-.footer{
-    display: inline-block;
-    width: 80%;
-    margin-left: 20%;
-    height: 150px;
-    background-color: #373867;   
+.memberships-img img{
+    position: relative;
+    bottom: 40px;
+    right: 20px;
 }
 
-.footer-img{
+footer img{
+    position: relative;
+    margin: 50px 20px 0px 10px;
     float: right;
 }
 
-.footer small{
+footer small{
     display: inline-block;
     margin-top: 60px;
     margin-left: 50px;
     font-size: 20px;
     font-weight: 600;
     line-height: 23px;
-    text-align: center;
-    
+    text-align: center;  
 }
 
 
