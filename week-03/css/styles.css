@@ -2,7 +2,6 @@
 body{
  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
 aside{
     position: fixed;
     width: 20%;
@@ -10,49 +9,39 @@ aside{
     bottom: 0%;
     background-color: #AACE9B;
 }
-
 aside ul li{
     margin-bottom: 10px;
     text-align: center;   
 }
-
 a{
     text-decoration: none;
     vertical-align: middle;
     text-align: center;
 }
-
 main{
-    top: 135px;
-    right: 0px;
+    margin-left: 20%;
     width: 80%;
     height: 100%;
 }
-
 footer{
-    display: inline-block;
     width: 80%;
     margin-left: 20%;
     height: 150px;
     background-color: #373867;   
 }
-
 .header{
-    position: relative;
+    padding-left: 20%;
     height: 135px;
     width: 80%;
-    margin-left: 20%;
     background-color: #373867;
 }
-
 .section{
-    position: relative;
-    margin-left: 600px;
+    margin-left: 71px;
     margin-bottom: 200px;
-    top: 135px;
+    margin-top: 135px;
     width: 80%;
+    height: 981px;
 }
-
 .rr-logoship{
     position: relative;
     height: 45px;
@@ -60,7 +49,6 @@ footer{
     margin-left: 50px;
     margin-top: 45px;
 }
-
 .header h1{
     position: relative;
     display: inline-block;
@@ -73,14 +61,12 @@ footer{
     letter-spacing: 0em;
     text-align: right; 
 }
-
 .radium{
     margin-left: 95px;
     margin-top: 20px;
     height: 140px;
     width: 95px;
 }
-
 .aside-button{
     display: block;
     margin-left: 40px;
@@ -99,15 +85,12 @@ footer{
     line-height: 40px;
     box-sizing: border-box;
 }
-
-
 .home{
     font-weight: 700;
     font-size: 30px;
     color:white;
     background-color: #373867;
 }
-
 .other{
     margin-top: 10px;
     margin-left: 40px;
@@ -117,9 +100,8 @@ footer{
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
-    text-align: center; 
+    text-align: center;  
 }
-
 .questions{
     display: block;
     margin-left: 36px;
@@ -130,12 +112,10 @@ footer{
     line-height: 23px;
     text-align: left;
 }
-
 .help a{
     text-decoration: none;
     color: #373867;
 }
-
 .links{
     display: inline-block;
     margin-top: 10px;
@@ -147,28 +127,31 @@ footer{
     line-height: 23px;
     font-weight: 600;
     text-align: left;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
-
 .links li a{
     display: inline-block;
     color: #373867;
     text-decoration: none;
     text-align: center;   
 }
-
 .links li a img{
     padding: 10px;
     vertical-align: middle;
 }
-
 .links li:nth-child(3){
     margin-left: -35px;
 }
-
+.section-first{
+    margin-left: 71px;
+    margin-bottom: 200px;
+    margin-top: 135px;
+    width: 80%;
+    height: 650px;
+}
 #presentation h2{
-    position: absolute;
-    left: 68px;
-    top: 68px;
+    margin-left: 68px;
+    margin-top: 68px;
     height: 59px;
     width: 480px;
     color: #373867;
@@ -177,9 +160,9 @@ footer{
     line-height: 35px;
     text-align: left;
 }
-
 #presentation p{
-    position: absolute;
+    margin-top: 141px;
+    margin-left: 74px;
     height: 287px;
     width: 431px;
     left: 74px;
@@ -189,16 +172,14 @@ footer{
     font-weight: 600;
     line-height: 23px;
 }
-
-#presentation img{
-    display: block;
-    left: 729px;
-    top: 226px;
+ #presentation img{ 
+    position: absolute;
+    z-index: -1;
+    margin-top: -447px;
     margin-left: 434px;
     height: 684px;
     width: 810px;
 }
-
 #h{
     margin-top: 40px;
     background-image: url("../img/hombre.png");
@@ -207,7 +188,6 @@ footer{
     height: 1000px;
     width: 1094px;
 }
-
 .h2-howcanwehelpyou{
     position: absolute;
     margin-top: 124px;
@@ -222,7 +202,6 @@ footer{
     text-align: center;
     color: white;
 }
-
 .how-can-we-help-you li{
     position: absolute;
     height: 107px;
@@ -241,32 +220,28 @@ footer{
     vertical-align: middle;
     text-align: center;
 }
-
 .how-can-we-help-you li:nth-child(1){
     margin-left: 75px;
     margin-top: 267px; 
     padding-top: 35px;
 }
-
 .how-can-we-help-you li:nth-child(2){
     margin-left: 77px;
     margin-top: 556px;
     padding-top:35px;
     padding-left: 65px;
 }
-
 .how-can-we-help-you li:nth-child(3){
     margin-left: 606px;
     margin-top: 267px;
 }
-
 .how-can-we-help-you li:nth-child(4){
     margin-left: 606px;
     margin-top: 556px;
 }
-
 .contact1{
     position: absolute;
+    display: inline-block;
     height: 59px;
     width: 431px;
     margin-bottom: 0px;
@@ -274,18 +249,14 @@ footer{
     font-weight: 700;
     line-height: 47px;
     text-align: left;
-    display: inline-block;
     color: #373867;
 }
-
 .mail-logo{
     margin-top: 11px;
     margin-left: 295px;
 }
-
 .fname{
     display: block;
-    
     margin-top: 17px;
     margin-right: 32px;
     color: #373867;
@@ -293,7 +264,6 @@ footer{
     font-weight: 700;
     line-height: 35px;
 }
-
 .fname input{
     margin-left: 260px;
     margin-top: 141px;
@@ -308,7 +278,6 @@ footer{
     letter-spacing: 0em;
     text-align: left; 
 }
-
 .fname:nth-child(1) input{
     margin-left: 260px;
     margin-top: 141px;
@@ -317,7 +286,6 @@ footer{
     border-radius: 20px;
     border: 1px solid rgba(55, 56, 103, 1)
 }
-
 .fname:nth-child(2) input{
     margin-left: 200px;
     margin-top: 0px;
@@ -326,7 +294,6 @@ footer{
     border-radius: 20px;
     border: 1px solid rgba(55, 56, 103, 1)
 }
-
 .fname:nth-child(3) input{
     height: 45px;
     width: 293px;
@@ -335,10 +302,8 @@ footer{
     border-radius: 20px;
     border: 1px solid rgba(55, 56, 103, 1)
 }
-
 .reason{
     margin-top: 32px;
-  
     margin-bottom: 35px;
     color: #373867;
     font-size: 30px;
@@ -347,11 +312,9 @@ footer{
     letter-spacing: 0em;
     text-align: left;
 }
-
 .radio{
     display: block;
 }
-
 .radio input{
     margin-top: 20px;
     height: 16px;
@@ -359,7 +322,6 @@ footer{
     color: rgba(52, 99, 110, 1);
     border-color: rgba(52, 99, 110, 1);
 }
-
 .radio label{
     height: 35px;
     width: 498px;
@@ -369,7 +331,6 @@ footer{
     line-height: 35px;
     text-align: left;  
 }
-
 .message{
     margin-top: 78px;
     margin-bottom: 15px;
@@ -379,7 +340,6 @@ footer{
     line-height: 35px;
     text-align: left;
 }
-
 textarea {
     margin-right: 200px;
     height: 100px;
@@ -387,12 +347,10 @@ textarea {
     padding: 40px;
     border-color: rgba(52, 99, 110, 1);
 }
-
 .buttoms{
     display: inline-block;
-    margin-bottom: 10px;
+    padding-bottom: 24px;
 }
-
 .submit{
     margin-top: 10px;
     height: 47px;
@@ -405,7 +363,6 @@ textarea {
     font-weight: 500;
     line-height: 19px; 
 }
-
 .reset{
     margin-top: 10px;
     margin-left: 50px;
@@ -418,10 +375,8 @@ textarea {
     font-weight: 500;
     line-height: 19px;   
 }
-
 .line{
-    position: absolute;
-    margin-left: 650px;
+    margin-left: 91px;
     margin-top: 10px;
     margin-bottom: 10px;
     height: 5px;
@@ -437,20 +392,18 @@ textarea {
     line-height: 47px;
     text-align: left;   
 }
-
 .dumbeel{
     margin-top: 30px;
    height: 1000px;
    width: 1094px;
+   padding: 10px;
    background-image: url("../img/mujer-mancuerna.png");
    background-repeat: no-repeat;
    background-size: cover;
 }
-
 .text-dumbeel{
-    position: absolute;
-    top: 40%;
-    left: 8%;
+    margin-top: 249px;
+    margin-left: 151px;
     width: 70%;
     color:rgba(255, 255, 255, 1);
     font-size: 30px;
@@ -458,16 +411,13 @@ textarea {
     line-height: 35px;
     text-align: center;
 }
-
 #activities-memberships article{
     display:inline-block;
     width: 50%;
 }
-
 .activities{
     float: left;
 }
-
 .activities h2{
     color: #373867; 
     font-size: 40px;
@@ -475,7 +425,6 @@ textarea {
     line-height: 47px;
     text-align: left;         
 }
-
 .lista-act a{
     position: relative;
     top: -48px;
@@ -488,13 +437,11 @@ textarea {
     line-height: 35px;
     text-align: left; 
 }
-
 .memberships{
     display: inline-block;
     color: black; 
     vertical-align: middle;
 }
-
 .memberships h2{
     width: 500px;
     font-size: 40px;
@@ -502,43 +449,36 @@ textarea {
     line-height: 47px;
     text-align: left;    
 }
-
 .memberships h3{
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
     text-align: left;        
 }
-
 .memberships-list{
     display: inline-block;
     margin-top: 20px;
 }
-
 .memberships-list li{
     font-size: 20px;
     font-weight: 600;
     line-height: 23px;
     text-align: left;
 }
-
 .memberships-img{
     display:inline-block;
     margin-bottom: 80px;
 }
-
 .memberships-img img{
     position: relative;
     bottom: 40px;
     right: 20px;
 }
-
 footer img{
     position: relative;
     margin: 50px 20px 0px 10px;
     float: right;
 }
-
 footer small{
     display: inline-block;
     margin-top: 60px;
