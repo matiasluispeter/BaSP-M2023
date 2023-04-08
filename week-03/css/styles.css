@@ -214,9 +214,8 @@ footer{
     border: 1px solid #373867 ;
     display: flex;
     flex-direction: row;
-    font-size: 30px;
+    font-size: 15px;
     font-weight: 700;
-    line-height: 35px;
     vertical-align: middle;
     text-align: center;
 }
@@ -347,11 +346,11 @@ textarea {
     padding: 40px;
     border-color: rgba(52, 99, 110, 1);
 }
-.buttoms{
+.buttoms {
     display: inline-block;
     padding-bottom: 24px;
 }
-.submit{
+.submit {
     margin-top: 10px;
     height: 47px;
     width: 178px;
@@ -363,7 +362,7 @@ textarea {
     font-weight: 500;
     line-height: 19px; 
 }
-.reset{
+.reset {
     margin-top: 10px;
     margin-left: 50px;
     height: 46px;
@@ -375,7 +374,7 @@ textarea {
     font-weight: 500;
     line-height: 19px;   
 }
-.line{
+.line {
     margin-left: 91px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -384,7 +383,7 @@ textarea {
     background: rgba(55, 56, 103, 1);
 }
 
-#Our-history h2{
+#Our-history h2 {
     margin-top: 48px;
     color: #373867;
     font-size: 40px;
@@ -392,7 +391,7 @@ textarea {
     line-height: 47px;
     text-align: left;   
 }
-.dumbeel{
+.dumbeel {
     margin-top: 30px;
    height: 1000px;
    width: 1094px;
@@ -401,7 +400,7 @@ textarea {
    background-repeat: no-repeat;
    background-size: cover;
 }
-.text-dumbeel{
+.text-dumbeel {
     margin-top: 249px;
     margin-left: 151px;
     width: 70%;
@@ -411,21 +410,21 @@ textarea {
     line-height: 35px;
     text-align: center;
 }
-#activities-memberships article{
+#activities-memberships article {
     display:inline-block;
     width: 50%;
 }
-.activities{
+.activities {
     float: left;
 }
-.activities h2{
+.activities h2 {
     color: #373867; 
     font-size: 40px;
     font-weight: 700;
     line-height: 47px;
     text-align: left;         
 }
-.lista-act a{
+.lista-act a {
     position: relative;
     top: -48px;
     margin-left: 81px;
@@ -437,35 +436,35 @@ textarea {
     line-height: 35px;
     text-align: left; 
 }
-.memberships{
+.memberships {
     display: inline-block;
     color: black; 
     vertical-align: middle;
 }
-.memberships h2{
+.memberships h2 {
     width: 500px;
     font-size: 40px;
     font-weight: 700;
     line-height: 47px;
     text-align: left;    
 }
-.memberships h3{
+.memberships h3 {
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
     text-align: left;        
 }
-.memberships-list{
+.memberships-list {
     display: inline-block;
     margin-top: 20px;
 }
-.memberships-list li{
+.memberships-list li {
     font-size: 20px;
     font-weight: 600;
     line-height: 23px;
     text-align: left;
 }
-.memberships-img{
+.memberships-img {
     display:inline-block;
     margin-bottom: 80px;
 }
