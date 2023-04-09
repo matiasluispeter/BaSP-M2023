@@ -1,7 +1,26 @@
 
 body {
     width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
 }
+
+h1 {
+    font-size: 1.8vw;
+    color: rgba(170, 206, 155, 1);
+}
+
+h2 {
+    text-align: center;
+    color: rgba(55, 56, 103, 1);
+    font-size: 6vw;
+}
+
+
+
+
+
+
 
 
 
