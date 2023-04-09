@@ -1,0 +1,182 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.image {
+    width: 100vw;
+    margin-bottom: 0.6rem;    
+}
+
+.first-paragraph {
+    font-size: 4vw;
+    color: #373867;
+}
+
+.image-man {
+    background-image: url(../img/hombre.png);
+    background-position: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    align-items: center;
+    height: 50vh;
+    vertical-align: middle;
+}
+
+.h2-how-can-we-help{
+    text-align: center;
+    color: black;
+    margin: 2vh;
+}
+
+.image-man ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20rem;
+    align-items: center;
+}
+
+.image-man ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.8rem;
+    width: 50vw;
+    height: 5vh;
+    text-align: center;
+    align-items: center;
+    border-radius: 0.3rem;
+    background-color: rgba(235, 236, 240, 1);
+    color: #373867;
+    border: 1px solid #373867 ;
+    border-radius: 0.3rem;
+    background-color: rgba(235, 236, 240, 1);
+    color: #373867;
+    border: 1px solid #373867 ;
+}
+
+.contact-first {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.contact-first h2 {
+    margin-right: 3.455vw;
+}
+
+
+.contact-first img {
+    height: 1.2rem;
+    width: 1rem;
+}
+
+.aling-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: centers;
+    height: 50vh; 
+}
+
+.aling-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.aling-row input {
+    border-radius: 1.25rem;
+    font-size: 0.6rem;
+}
+
+
+.textarea {
+    padding: 1rem 0.5rem;   
+}
+
+.buttons{
+    border-radius: 0.3rem;
+}
+.submit {
+    margin-right: 1vw;
+    background:rgba(170, 206, 155, 1) ;
+}
+
+.text-dumbeel {
+    background-image: url(../img/mujer-mancuerna.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 3rem; 
+    text-align: center;
+    height: 20rem;
+    color: white;
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    height: 20rem;
+}
+.ul-activities li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ul-activities a {
+    margin-left: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #373867;
+    font-size: 1rem;
+}
+
+.activities img {
+    width: 3rem;
+}
+
+.memberships-guide {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    
+}
+.memberships {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.memberships img {
+    width: 2.12rem;
+    height: 2.5rem;
+}
+
+.membership-info {
+    margin: 2rem;
+    font-size: 0.8rem;
+}
+
+.membership-info ul {
+    margin: 0.5rem;
+}
