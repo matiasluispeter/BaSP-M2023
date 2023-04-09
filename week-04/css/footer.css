@@ -1,0 +1,16 @@
+.footer {
+    background: rgba(55, 56, 103, 1);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0rem;
+    text-align: end;
+
+}
+
+.footer small {
+    margin-top: 0.5rem;
+    font-size: 0.5rem;
+}
+.footer img {
+    width: 1.25rem;
+}
