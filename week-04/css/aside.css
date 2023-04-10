@@ -1,18 +1,12 @@
-aside {    
+
+aside {
+    display: none;   
     position: sticky;    
     height: 100vh;
     width: 100%;
     background-color: #fff;
   }
   
-  @media (max-width: 767px) {
-    aside {
-      position: sticky;
-      top: 0;
-      z-index: 1;
-    }
-  }
-
   .aside-general {
     display: flex;
     flex-direction: column;
@@ -108,4 +102,108 @@ aside {
 
   .aside-last img {
     width: 1rem;
+  }
+
+  @media (min-width: 480px) {
+    aside {
+      position: sticky;
+      top: 0;
+      width: 20%;
+      height: 100vh;
+      display: flex;
+      background-color: rgba(170, 206, 155, 1);
+    }
+
+    .aside-general {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+       
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .aside-reset {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        top: 0;
+    }
+
+    .buttons-aside {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttons-aside li {
+        width: 6rem;
+        height: 2rem;
+        background: rgba(235, 236, 240, 1);
+        font-size: 1.2rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+    .buttons-aside {
+        justify-content: space-around;
+        height: 30vh;
+    }
+
+    .aside-reset-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .aside-reset-nav a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.5rem;
+        text-decoration: none;
+    }
+
+    .aside-reset-nav img {
+        width: 1rem;
+    }
+
+    .other-options {
+        display: flex;
+        font-size: 1rem;
+        justify-content: center;
+        align-items: center;
+       
+        color:rgba(55, 56, 103, 1)
+        }  
+    
+
+    .extra-aside {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+    }
+    .other-options h2 {
+        font-size:0.6rem;
+    }
+    
+    .options {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        color: rgba(55, 56, 103, 1);
+        text-decoration: none;
+
+    }
+
   }

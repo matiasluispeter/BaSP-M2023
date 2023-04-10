@@ -15,13 +15,21 @@ header {
 }
 
 .menu-logoship {
-    width: 31.33px;
-    height: 31px;
+    width: 5vw;
 }
 
 .h1 {
     margin: auto;
-    font-size: 30px;
+    font-size: 5vw;
     font-weight: 700;
     line-height: 35px;
+}
+
+@media only screen and (min-width: 480px) {
+    header {
+        width: 100%;
+        margin: 0 auto;
+    }
+   
+   
 }

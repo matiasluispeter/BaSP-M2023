@@ -3,6 +3,9 @@ main {
     flex-direction: column;
     align-items: center;    
 }
+
+
+
 .section {
     display: flex;
     flex-direction: column;
@@ -88,7 +91,8 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: centers;
-    height: 50vh; 
+    height: 50vh;
+    color: #373867; 
 }
 
 .aling-row {
@@ -127,7 +131,7 @@ main {
     width: 100vw;
     padding: 3rem; 
     text-align: center;
-    height: 20rem;
+    height: 36vh;
     color: white;
 }
 
@@ -179,4 +183,10 @@ main {
 
 .membership-info ul {
     margin: 0.5rem;
+}
+
+@media (min-width: 480px) {
+    main {
+    width: 80%;
+    }
 }

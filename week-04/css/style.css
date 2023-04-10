@@ -16,6 +16,17 @@ h2 {
     font-size: 6vw;
 }
 
+@media screen and (min-width:480px) {
+    body {
+        display: flex;
+    }
+
+    .general-container {
+        width: 80%;
+    }
+    
+}
+
 
 
 
