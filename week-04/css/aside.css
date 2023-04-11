@@ -1,171 +1,134 @@
 
-aside {
-     
+aside {     
     position: sticky;    
     height: 100vh;
     width: 100%;
-    background-color: #fff;
     top: 0;
-  }
-  
-  .aside-general {
+    background-color: #fff;
+}
+.aside-general {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    
-  }
- 
-  .other-options {
+}
+.menu {
+    align-self: flex-start;
+    width: 2rem;
+}
+.aside-reset {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.aside-reset-nav {
+    display: flex;
+    flex-direction: column;
+}
+.radium { 
+    width: 4.18rem ;
+    margin-top: 1rem;
+}
+.buttons-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    width: 5vw;
+    margin-right: 11rem;
+}
+.buttons-aside li {
+    width: 12.5rem;
+    height: 4.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(235, 236, 240, 1);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+.buttons-aside li:nth-child(1) {    
+    background-color: rgba(55, 56, 103, 1);
+}
+.buttons-aside li a {
+    text-decoration: none;
+    color: rgba(55, 56, 103, 1);
+} 
+.buttons-aside li:nth-child(1) a {
+    color:rgba(235, 236, 240, 1);
+}
+.buttons-aside li:nth-child(4) {
+    display: none;
+}
+.other-options {
     display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 5rem;
-  }
-
-  .options a {
     color: rgba(55, 56, 103, 1);
-  }
-  .menu {
-    align-self: flex-start;
-    width: 2rem;
-  }
-
-  .aside-inter {
-    align-self: center;
-  }
-
-  .aside-reset {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .aside-reset-nav {
-    display: flex;
-    flex-direction: column;
-  }
-   .buttons-aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 50vh;
-    margin-right: 11rem;
-    width: 5vw;
-   }
-
-   .buttons-aside li a {
+}
+.other-options a {
     color: rgba(55, 56, 103, 1);
-   }
-   .buttons-aside li:nth-child(1) a {
-    color:rgba(235, 236, 240, 1);
-   }
-
-   .buttons-aside li:nth-child(1) {
-    background-color: rgba(55, 56, 103, 1);
-   }
-   .buttons-aside li:nth-child(4) {
-    display: none;
-   }
-
-
-   .information-extra {
+}
+.information-extra {
     display: flex;
     justify-content: space-between;
-    width: 40vw ;
-   }
-
-   .information-extra a {
+    width: 90px ;
+}
+.information-extra a {
     text-decoration: none;
-   }
-
-   .information-extra img {
+}
+.information-extra img {
     width: 1rem;
-   }
-
-   .buttons-aside li {
-    width: 12.5rem;
-    height: 4.3rem;
-    background-color: rgba(235, 236, 240, 1);
-    font-size: 1.25rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-
-   .buttons-aside li a {
-    text-decoration: none;
-   }
-
-  .radium { 
-    width: 4.18rem ;
-    margin-top: 1rem;
-  }
-
-  .other-options { 
-    display: none;
-    flex-direction: column;
-    color: rgba(55, 56, 103, 1);
-  }
-
-  .aside-last {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    width: 1rem;   
-  }
-
-  .aside-last img {
-    width: 1rem;
-  }
-
-  .info-aside {
+}   
+.info-aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 2rem;
     align-items: center;
     color: rgba(55, 56, 103, 1);
-  }
-
-  .info-aside a {
+}
+.info-aside a {
     color: rgba(55, 56, 103, 1);
-  }
-  
-
-
-
-
-  @media (min-width: 480px) {
+}
+.aside-last {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    width: 15rem;   
+}
+.aside-last img {
+    width: 1rem;
+} 
+@media (min-width: 480px) {
     aside {
-      position: sticky;
-      top: 0;
-      width: 20%;
-      height: 100vh;
-      display: flex;
-      background-color: rgba(170, 206, 155, 1);
+        position: sticky;
+        display: flex;
+        top: 0;
+        width: 20%;
+        height: 100vh;
+        background-color: rgba(170, 206, 155, 1);
     }
-
     .aside-general {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-       
+        width: 100%;       
     }
-
     .menu {
         display: none;
     }
-
     .radium {
-        margin-top: -8rem;
+        margin-top: -5rem;
+        margin-bottom: 2rem;
+        width: 2.5rem;
     }
-
     .aside-reset {
         display: flex;
         flex-direction: column;
@@ -174,87 +137,72 @@ aside {
         width: 100%;
         top: 0;
     }
-
-    .buttons-aside {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .buttons-aside li {
-        width: 5rem;
-        height: 2rem;
-        background: rgba(235, 236, 240, 1);
-        font-size: 1.2rem;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       }
-
-       .buttons-aside li:nth-child(1) {
-        color: rgba(170, 206, 155, 1);
-        background-color: rgba(55, 56, 103, 1);
-       }
-
-       .buttons-aside li:nth-child(4) {
-        display: flex;
-       }
-
-    .buttons-aside {
-        justify-content: space-around;
-        height: 30vh;
-    }
-
     .aside-reset-nav {
         display: flex;
         align-items: center;
     }
-
     .aside-reset-nav a {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 0.5rem;
+        font-size: 11px;
+        font-weight: bold;
         text-decoration: none;
     }
-
     .aside-reset-nav img {
         width: 1rem;
     }
-
-    .other-options {
+    .buttons-aside {
         display: flex;
-        font-size: 1rem;
+        align-items: end;
+        justify-content: space-around;
+        width: 100%;
+        height: 30vh;
+    }
+    .buttons-aside li {
+        display: flex;
         justify-content: center;
         align-items: center;
-       
-        color:rgba(55, 56, 103, 1)
-        }  
-    
-
+        width: 5rem;
+        height: 2rem;
+        border-radius: 5px;
+        background: rgba(235, 236, 240, 1);
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .buttons-aside li:nth-child(1) {
+        color: rgba(170, 206, 155, 1);
+        background-color: rgba(55, 56, 103, 1);
+    }
+    .buttons-aside li:nth-child(4) {
+        display: flex;
+    }
+    .other-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        margin: 26px 0;
+        color:rgba(55, 56, 103, 1);
+    } 
+    .other-options a {
+        font-size: 0.5rem;
+    }
     .extra-aside {
         display: none;
         justify-content: center;
         align-items: center;
         text-decoration: none;
-
     }
-
-    .other-options h2 {
-        font-size:0.6rem;
+    .info-aside {
+        height: 4rem;
     }
-    
-    .options {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        align-items: flex-start;
-        color: rgba(55, 56, 103, 1);
-        text-decoration: none;
+    .info-aside ul:nth-child(3) {
+        margin-left: -3px;
     }
-
+    .info-aside a{
+        font-size: 0.5rem;
+    }
     .info-aside img {
         width: 1rem;
 
