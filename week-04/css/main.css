@@ -3,59 +3,74 @@ main {
     flex-direction: column;
     align-items: center;    
 }
-
-
-
 .section {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.section-first {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     align-items: center;
     justify-content: center;
     padding: 2rem;
 }
 .image {
-    width: 100vw;
+    width: 100%;
     margin-bottom: 0.6rem;    
 }
 
 .first-paragraph {
-    font-size: 4vw;
+    order: 1;
+    font-size: 0.5rem;
     color: #373867;
 }
 
 .image-man {
     background-image: url(../img/hombre.png);
     background-position: center;
+    background-repeat: no-repeat;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     align-items: center;
-    height: 50vh;
+    height: 100vh;
     vertical-align: middle;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .h2-how-can-we-help{
     text-align: center;
-    color: black;
+    color: white;
     margin: 2vh;
+    font-size: 2rem;
 }
 
-.image-man ul {
+#how-can-i {
+    width: 100%;
+}
+
+.div-false-bottom ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 20rem;
     align-items: center;
 }
 
-.image-man ul li{
+.div-false-bottom ul li{
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 0.8rem;
-    width: 50vw;
-    height: 5vh;
+    width: 80%;
+    height: 3rem;
+    margin: 10px 0;
     text-align: center;
     align-items: center;
     border-radius: 0.3rem;
@@ -66,6 +81,7 @@ main {
     background-color: rgba(235, 236, 240, 1);
     color: #373867;
     border: 1px solid #373867 ;
+    font-weight: bold;
 }
 
 .contact-first {
@@ -128,7 +144,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     padding: 3rem; 
     text-align: center;
     height: 36vh;
@@ -186,7 +202,112 @@ main {
 }
 
 @media (min-width: 480px) {
-    main {
+
+
+   .general-containe {
     width: 80%;
+   }
+  
+   .first-paragraph {
+    padding: 6rem 2.7rem;
+    font-size: 1rem;
+   }
+
+   .image {
+    width: 13rem;
+   }
+
+    .text-dumbeel {
+        height: 82vh;
     }
+
+
+   .activities {
+    width: 100%;
+   }
+
+   .ul-activities {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+
+   }
+
+   #activities-memberships {
+    width: 100%;
+   }
 }
+
+@media screen and (min-width: 1024px) {
+    .line {
+        height: 3px;
+        background-color: #373867;
+        width: 90%;
+        margin: 1rem 0;
+
+    }
+    .div-false-bottom ul{
+        flex-direction: row;
+        margin:20px;
+    }
+    .div-false-bottom ul li {
+        margin: 20px;
+    }
+
+    .section {
+        height: 155vh;
+    }
+
+    .section-first {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        height: 27rem;
+        padding: 0;
+       }
+    .section-first h2 {
+       font-size: 1.6rem;
+       width: 50%;
+       padding: 1rem 0;
+    }
+
+    .image {
+        width: 26rem;
+    }
+    
+    .first-paragraph {
+        order: 0;
+        width: 40%;
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .aling-row input {
+        font-size: 1rem;
+    }
+
+    .textarea {
+        padding: 5rem 1rem;
+    }
+
+
+
+    .contact-first img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .text-dumbeel {
+        height: 120vh;
+    }
+
+    .ul-activities {
+        flex-wrap: nowrap;
+        margin-bottom: 3rem;
+    }
+
+    }

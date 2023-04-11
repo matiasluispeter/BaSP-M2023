@@ -1,10 +1,11 @@
 
 aside {
-    display: none;   
+     
     position: sticky;    
     height: 100vh;
     width: 100%;
     background-color: #fff;
+    top: 0;
   }
   
   .aside-general {
@@ -12,7 +13,8 @@ aside {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 55rem;
+    height: 100%;
+    
   }
  
   .other-options {
@@ -21,6 +23,10 @@ aside {
     justify-content: space-between;
     align-items: center;
     height: 5rem;
+  }
+
+  .options a {
+    color: rgba(55, 56, 103, 1);
   }
   .menu {
     align-self: flex-start;
@@ -45,14 +51,25 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 37vh;
-    margin-bottom: 1rem;
+    height: 50vh;
+    margin-right: 11rem;
+    width: 5vw;
    }
 
-   .buttons-aside :nth-child(1) {
-    color: rgba(170, 206, 155, 1);
-    background: rgba(55, 56, 103, 1);
+   .buttons-aside li a {
+    color: rgba(55, 56, 103, 1);
    }
+   .buttons-aside li:nth-child(1) a {
+    color:rgba(235, 236, 240, 1);
+   }
+
+   .buttons-aside li:nth-child(1) {
+    background-color: rgba(55, 56, 103, 1);
+   }
+   .buttons-aside li:nth-child(4) {
+    display: none;
+   }
+
 
    .information-extra {
     display: flex;
@@ -65,13 +82,13 @@ aside {
    }
 
    .information-extra img {
-    width: 2rem;
+    width: 1rem;
    }
 
    .buttons-aside li {
     width: 12.5rem;
     height: 4.3rem;
-    background: rgba(235, 236, 240, 1);
+    background-color: rgba(235, 236, 240, 1);
     font-size: 1.25rem;
     text-align: center;
     display: flex;
@@ -85,11 +102,13 @@ aside {
 
   .radium { 
     width: 4.18rem ;
+    margin-top: 1rem;
   }
 
   .other-options { 
     display: none;
     flex-direction: column;
+    color: rgba(55, 56, 103, 1);
   }
 
   .aside-last {
@@ -103,6 +122,23 @@ aside {
   .aside-last img {
     width: 1rem;
   }
+
+  .info-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2rem;
+    align-items: center;
+    color: rgba(55, 56, 103, 1);
+  }
+
+  .info-aside a {
+    color: rgba(55, 56, 103, 1);
+  }
+  
+
+
+
 
   @media (min-width: 480px) {
     aside {
@@ -126,6 +162,10 @@ aside {
         display: none;
     }
 
+    .radium {
+        margin-top: -8rem;
+    }
+
     .aside-reset {
         display: flex;
         flex-direction: column;
@@ -143,7 +183,7 @@ aside {
     }
 
     .buttons-aside li {
-        width: 6rem;
+        width: 5rem;
         height: 2rem;
         background: rgba(235, 236, 240, 1);
         font-size: 1.2rem;
@@ -151,6 +191,15 @@ aside {
         display: flex;
         justify-content: center;
         align-items: center;
+       }
+
+       .buttons-aside li:nth-child(1) {
+        color: rgba(170, 206, 155, 1);
+        background-color: rgba(55, 56, 103, 1);
+       }
+
+       .buttons-aside li:nth-child(4) {
+        display: flex;
        }
 
     .buttons-aside {
@@ -192,6 +241,7 @@ aside {
         text-decoration: none;
 
     }
+
     .other-options h2 {
         font-size:0.6rem;
     }
@@ -203,7 +253,12 @@ aside {
         align-items: flex-start;
         color: rgba(55, 56, 103, 1);
         text-decoration: none;
-
     }
 
+    .info-aside img {
+        width: 1rem;
+
+    }
   }
+  
+  
