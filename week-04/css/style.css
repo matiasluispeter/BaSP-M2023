@@ -4,47 +4,30 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 3vw;
 }
-
-.h1 {
-    font-size: 1.8vw;
-    color: rgba(170, 206, 155, 1);
-}
-
 h2 {
     text-align: center;
     color: rgba(55, 56, 103, 1);
     font-size: 6vw;
     font-weight: bold;
 }
-
 a {
     text-decoration: none;
 }
-
 @media screen and (min-width:480px) {
     body {
         display: flex;
     }
-
     .general-container {
         width: 80%;
     }
     h2 {
         font-size: 160%;
-        ;
     }
-    
 }
- 
- 
 @media screen and (min-width:1024px) {
     .radium-logoship {
         width: 5vw;
-    }
-    .h1 {
-        font-size: 3vw;
-    }
-    
+    }   
 }
 
 
