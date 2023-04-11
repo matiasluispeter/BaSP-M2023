@@ -1,6 +1,6 @@
 
 aside { 
-    position: sticky;    
+    position: fixed;    
     height: 100vh;
     width: 100%;
     top: 0;
