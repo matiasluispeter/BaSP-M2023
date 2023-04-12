@@ -1,5 +1,5 @@
-
 aside { 
+    display: none;
     position: fixed;    
     height: 100vh;
     width: 100%;
@@ -7,6 +7,7 @@ aside {
     background-color: #fff;
 }
 .aside-general {
+    display: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,7 +28,7 @@ aside {
     flex-direction: column;
 }
 .radium { 
-    width: 4.18rem ;
+    width: 12vw ;
     margin-top: 1rem;
 }
 .buttons-aside {
@@ -102,7 +103,6 @@ aside {
 }
 .extra-aside {
     width: 100%;
-
 }
 .aside-last {
     display: flex;
