@@ -10,6 +10,11 @@ I develop the css project. First i fix the html. Next started with the css. I fi
 ## In the week 04
 [GitHubs Pages](https://matiasluispeter.github.io/BaSP-M2023/week-04/index.html)
 I develop the css project using responsing. I used display flex. In addition to this i modified the html because i have to fix it with the new css. the css was rewritte again in 6 parts (aside, footer, header, main, resets and style). The css was develop from a landing page for ipod ipad and mac wich has differents sizes.
+## In the week 05
+[GitHubs Pages](https://matiasluispeter.github.io/BaSP-M2023/Week-05/index.html)
+I did the exercises of Java Script using ECMAScript5. It was based on 6 differents thems. Variables and operators, strings, arrays, if and else, for and functions. On the other hand i fix the html and css with de corrections.
+i corrected the logoship of the header, the heights into the sections, the picture in section 4, the height of the 
+footer and the font size in the aside. In addition to this, i did the corrections in the html.
 ## Matías Peter
 
  
