@@ -14,10 +14,10 @@
     </head>
     <body>
         <aside> 
-            <div class="aside-general">
-                <img src="./img/menu.png" alt="menu logoship" class="menu">
-                <div class="aside-reset">
-                    <img class="radium" src="./img/logo-rr.png" alt="Logoship">
+            <img src="./img/menu.png" alt="menu logoship" class="menu">
+            <div class="aside-reset">
+                <img class="radium" src="./img/logo-rr.png" alt="Logoship">
+                <div class="div-aside">
                     <nav class="aside-reset-nav">
                         <ul class="buttons-aside">
                             <li>
@@ -42,40 +42,35 @@
                             </li>
                         </ul>
                         <div class="other-options">                           
-                            <h3 class="other-title">OTHER OPTIONS</h3>
+                            <h2 class="other-title">OTHER OPTIONS</h2>
                                 <a href="#how-can-i-help">How can we help you?</a>
                                 <a href="#Our-history">Our history</a>
                                 <a href="#activities-memberships">Activities</a>
                         </div>
                     </nav>
-                </div>
                     <ul class="info-aside">
                         <li>
-                            <a href="info@rocket.com" class="information-extra"> 
-                                <img src="./img/mail.png" alt="mail logoship">
-                                info@rocket.com
-                            </a>
+                            <img src="./img/mail.png" alt="mail logoship">
+                            <a href="info@rocket.com" class="information-extra">info@rocket.com</a>
                         </li>    
                         <li>
+                            <img src="./img/logo-casa.png" alt="house logoship">
                             <a href="https://www.google.com.ar/maps/place/Rosario,+Santa+Fe/@-32.9520457,-60.7666799,12z/data=!3m1!4b1!4m6!3m5!1s0x95b6539335d7d75b:0xec4086e90258a557!8m2!3d-32.9587022!4d-60.6930416!16zL20vMDJ0YjE3" class="information-extra">
-                                <img src="./img/logo-casa.png" alt="house logoship">
-                                Rosario, Argentina
-                            </a>    
+                                Rosario, Argentina</a>    
                         </li>
                         <li>
-                            <a href="(0000)000-000" class="information-extra watsapp">
-                                <img src="./img/whatsapp.png" alt="whatsapp logoship">
-                                (0000)000-000            
-                            </a>
+                            <img src="./img/whatsapp.png" alt="whatsapp logoship">
+                            <a href="(0000)000-000" class="information-extra watsapp">000000000</a>
                         </li>
-                    </ul>  
-                <div class="extra-aside">
-                <h2>MEGA ROCKET</h2>
-                    <div class="aside-last">
-                        <img src="./img/gmail.png" alt="gmail logoship">
-                        <img src="./img/facebook.png" alt="facebook logoship">
-                        <img src="./img/instagram.png" alt="instagram logoship">
-                    </div>
+                    </ul>
+                </div> 
+            </div> 
+            <div class="extra-aside">
+            <h2>MEGA ROCKET S.A</S></h2>
+                <div class="aside-last">
+                    <img src="./img/gmail.png" alt="gmail logoship">
+                    <img src="./img/facebook.png" alt="facebook logoship">
+                    <img src="./img/instagram.png" alt="instagram logoship">
                 </div>
             </div>
         </aside>
@@ -124,45 +119,43 @@
                 </section>
                 <div class="line"></div>
                 <section id="Contact" class="section-contact">
-                    <div>
-                        <div class="contact-first">   
+                    <div class="contact-first">   
                         <h2>CONTACT</h2>
                         <img src="./img/mail.png" alt="mail logoship">
-                        </div>
                     </div>
                     <form class="aling-column">
                         <label for="Name" class="aling-row">
                             Name
-                            <input type="Insert your name" name="fname" value="Insert your name">
+                            <input type="text" name="fname" placeholder="Insert your name">
                         </label>
                         <label for="lname" class="aling-row">
                             Surname
-                            <input type="Insert your last name" name="lname" value="Insert your surname">
+                            <input type="text" name="lname" placeholder="Insert your surname">
                         </label>
                         <label for="E-mail" class="aling-row">
                             E-mail
-                            <input type="insert your e-mail" name="E-mail" value="insert your e-mail">
+                            <input type="text" name="E-mail" placeholder="insert your e-mail">
                         </label>
-                        <h3>Reason for contact:</h3>
+                        <h3 class="reason">Reason for contact:</h3>
                         <ul>
                             <li>
-                                <input type="radio" id="make-query" name="make-query" value="query">
+                                <input type="radio" id="make-query" name="make-query" placeholder="query">
                                 <label for="make-query">I want to make a query or suggestion</label>
                             </li>
                             <li>
-                                <input type="radio" id= "claim" name="Reason for contact" value="claim">
+                                <input type="radio" id= "claim" name="Reason for contact" placeholder="claim">
                                 <label for="claim">I want to make a claim</label>
                             </li>
                             <li>
-                                <input type="radio" id="memberships" name="Reason for contact" value="membrships and costs">
+                                <input type="radio" id="memberships" name="Reason for contact" placeholder="membrships and costs">
                                 <label for="memberships">I want to know the memberships and costs</label>
                             </li>
                         </ul>
-                        <label for="message"><h3 class="message">Message</h3></label>
-                        <textarea id="textarea" class="textarea" cols="30" rows="4">"type your message here"</textarea>
+                        <label for="textarea" class="message">Message</label>
+                        <textarea id="textarea" class="textarea" cols="30" rows="4" placeholder="type your message here"></textarea>
                         <div class="buttoms">
-                            <button class="submit" type="submit">Send message</button>
-                            <button class="reset" type="reset">reset</button>
+                            <input class="submit" type="submit" value= "Send message">
+                            <input class="reset" type="reset" value= "reset">
                         </div> 
                     </form>
                 </section>
@@ -223,7 +216,7 @@
                                 </div>
                             </div>
                             <div class="memberships">
-                                <img src="img/classic.png" alt="ray"></a>
+                                <img src="img/classic.png" alt="ray">
                                 <div class="membership-info">
                                     <h3>Classic membership</h3>
                                     <ul>
@@ -234,7 +227,7 @@
                                 </div>
                             </div>
                             <div class="memberships">
-                                <img src="img/only.png" alt="Heart"></a>
+                                <img src="img/only.png" alt="Heart">
                                 <div class="membership-info">
                                     <h3>Only classes memberships</h3>
                                     <ul>

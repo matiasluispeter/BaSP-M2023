@@ -4,12 +4,26 @@
     justify-content: space-between;
     margin-bottom: 0rem;
     text-align: end;
-    margin-top: 2rem;
+    align-items: center;
+    padding: 1rem;
 }
 .footer small {
-    margin-top: 0.5rem;
     font-size: 0.5rem;
 }
 .footer img {
     width: 1.25rem;
+}
+@media (min-width: 480px) {
+    .footer {
+        padding: 3rem;
+    }
+}
+@media (min-width: 1024px) {
+    .footer small {
+        margin-top: 0.5rem;
+        font-size: 0.5rem;
+    }
+    .footer img {
+        width: 1.25rem;
+    }
 }
