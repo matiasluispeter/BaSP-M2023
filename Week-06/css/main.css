@@ -1,0 +1,350 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.section-first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    width: 100%;
+}
+.first-paragraph {
+    order: 1;
+    padding: 2rem;
+    color: #373867;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    font-size: 0.5rem;
+}
+.image {
+    width: 100%;
+    margin-bottom: 0.6rem;    
+}
+#how-can-i {
+    width: 100%;
+}
+.image-man {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(../img/hombre.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.how-can-we-help {
+    text-align: center;
+    margin: 7rem 1rem;
+    color: white;
+    font-size: 40px;
+}
+.div-false-bottom {
+    margin-bottom: 5rem;
+}
+.div-false-bottom ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.div-false-bottom ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    margin: 1.4rem;
+    padding: 1.5rem;
+    border: 1px solid #373867 ;
+    border-radius: 0.3rem;
+    color: #373867;
+    background-color: rgba(235, 236, 240, 1);
+    font-weight: bold;
+    font-size: 12.8px;
+}
+.section-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+.contact-first {
+    display: flex;
+    align-items: center;
+}
+.contact-first img {
+    width: 20px;
+    margin-left: 5px;
+}
+.aling-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    color: #373867; 
+    font-weight: 700;
+}
+.aling-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+.aling-row input {
+    border-radius: 1.25rem;
+    color: rgba(55, 56, 103, 0.43);
+    border-color: rgba(55, 56, 103, 0.43);
+    font-size: 10px;
+    padding-left: 5px;
+    width: 50%;
+}
+.reason {
+    margin-top: 0.3rem 0;
+}
+.textarea {
+    margin: 18px 0;
+    color: rgba(55, 56, 103, 0.43);
+    border-color:rgba(55, 56, 103, 0.43);    
+}
+.buttons {
+    border-radius: 0.3rem;
+}
+.submit {
+    margin-right: 1vw;
+    background:rgba(170, 206, 155, 1);
+    border-radius: none;
+}
+.reset {
+    background-color: white;
+}
+.message {
+    margin-top: 0.5rem;
+}
+.text-dumbeel {
+    width: 100%;
+    padding: 10rem 3rem; 
+    background-image: url(../img/dumbell\,rush.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    text-shadow: 4px 4px 4px;
+}
+.activities-memberships {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    height: 16rem;
+}
+.ul-activities li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ul-activities p {
+    margin-left: 1rem;
+    color: #373867;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.activities img {
+    width: 3rem;
+}
+.memberships-guide {
+    display: flex;
+    flex-direction: column;
+}
+.memberships {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.memberships img {
+    width: 2.12rem;
+    height: 2.5rem;
+}
+.membership-info {
+    margin: 2rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.membership-info ul {
+    margin: 0.5rem;
+}
+.membership-info h3 {
+    font-size: 1rem;
+}
+@media (min-width: 480px) {
+   .general-container {
+        width: 80%;
+    }
+   .title {
+        font-size: 20px;
+    }
+    .first-paragraph {
+        padding: 1rem 2.7rem;
+        font-size: 0.7rem;
+        text-shadow: none;
+    }
+    .image {
+        width: 100%;
+    }
+    .how-can-we-help {
+        font-size: 35px;
+        margin-top: 6rem;
+    }
+    .div-false-bottom ul li {
+        font-size: 15px;
+        height: 4rem;
+    }
+    .contact-first img {
+        width: 30px;
+        margin-left: 10px;
+    }
+    .reason {
+        margin: 1rem;
+    }
+    .aling-row input {
+        padding: 0.5rem 0;
+    }
+    .activities-memberships {
+        width: 100%;
+    }
+    .activities {
+        width: 100%;
+    }
+    .ul-activities {
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .line {
+        height: 3px;
+        background-color: #373867;
+        width: 90%;
+        margin: 1rem 0;
+    }
+    .section {
+        height: 155vh;
+    }
+    .section-first {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        height: 27rem;
+        padding: 0;
+    }
+    .title {
+        font-size: 25px;
+        width: 50%;
+        padding: 1rem 0;
+    }
+    .first-paragraph {
+        order: 0;
+        width: 40%;
+        font-size: 16px;
+        padding: 0;
+    }
+    .image {
+        width: 26rem;
+    }    
+    #how-can-i {
+        width: 80%;
+    }
+    .image-man {
+        height: 58rem;
+    }
+    .how-can-we-help {
+        font-size: 40px;
+    }
+    .div-false-bottom ul {
+        flex-direction: row;
+        margin:20px;
+    }
+    .div-false-bottom ul li {
+        margin: 20px;
+        height: 6rem;
+        font-size: 30px;
+    }
+    .contact-first {
+    align-self: baseline;
+    }
+    .contact-first img {
+        width: 30px;
+        margin-left: 20px;  
+    }
+    .aling-column {
+        font-size: 20px;
+        align-self: baseline;
+        font-size: 20px;
+    }
+    .aling-row {
+        width: 50%;
+    }
+    .aling-row input {
+        font-size: 16px;
+    }
+    .reason {
+        margin: 1.5rem 0;
+    }
+    .message {
+        margin: 2rem 0;
+    }
+    .textarea {
+        padding: 5rem 1rem;
+        width: 90%;
+    }
+    .text-dumbeel {
+        padding: 4rem;
+        margin-left: 5rem;
+        width: 80%;
+        background-image: url(../img/mujer-mancuerna.png);
+    }
+    .activities-memberships {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .activities {
+        width: 50%;
+        height: 31rem;
+    }
+    .activities ul {
+        display: flex;
+        justify-content: space-between;
+        height: 40rem;
+    }
+    .memberships-guide {
+        width: 50%;
+    }
+    .ul-activities {
+        flex-wrap: nowrap;
+        margin-bottom: 3rem;
+    }
+    .activities-memberships {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .activities-memberships h2 {
+        font-size: 36px;
+    }
+    }

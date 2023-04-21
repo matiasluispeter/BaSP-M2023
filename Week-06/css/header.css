@@ -1,0 +1,45 @@
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    min-height: 58px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(55, 56, 103, 1);   
+}
+.radium-logoship-header{
+    display: none;
+}
+.menu-logoship {
+    width: 2.5rem;
+}
+.h1 {
+    margin: auto;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 35px;
+    color: rgba(170, 206, 155, 1);
+}
+@media only screen and (min-width: 480px) {
+    header {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0.5rem;
+    }
+    .radium-logoship-header {
+        display: flex;
+        width: 20vw;
+    }
+    .menu-logoship {
+        display: none;
+    }
+}
+@media screen and (min-width:1024px) {
+    header {
+        padding: 3rem;
+    }
+    .h1 {
+        font-size: 40px;
+    }
+}

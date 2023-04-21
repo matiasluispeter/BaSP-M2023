@@ -1,0 +1,14 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.section-first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: right;
+    justify-content: center;
+    margin: 3rem;
+    width: 50%;
+}

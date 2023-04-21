@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.menu-logoship {
+    display: none;
+}
+.icone-question {
+    width: 5px;
+}
+.general-sign-up {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.file {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin: 1rem 0;
+    color: rgba(55, 56, 103, 1);
+    font-size: 14px;
+    font-weight: bold;
+}
+.acept {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(1, 26, 249, 1);
+}
+.man-dumbel {
+    width: 50%;
+    display: flex;
+}
+.radium-logo {
+    width: 130px;
+    margin: 2rem;
+}
+.general-sign-up button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 36px;
+    margin: 2rem;
+    color: rgba(55, 56, 103, 1);
+    background-color: rgba(170, 206, 155, 1);
+    font-size: 30px;
+}
