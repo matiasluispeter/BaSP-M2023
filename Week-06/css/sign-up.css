@@ -1,3 +1,6 @@
+.h1text {
+    color: black !important;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -14,6 +17,11 @@ main {
 }
 .menu-logoship {
     display: none;
+}
+.back {
+    display: flex;
+    align-self: flex-start;
+    margin: 12px 20px;
 }
 .icone-question {
     width: 5px;
@@ -50,7 +58,7 @@ main {
     width: 130px;
     margin: 2rem;
 }
-.general-sign-up button {
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,4 +68,22 @@ main {
     color: rgba(55, 56, 103, 1);
     background-color: rgba(170, 206, 155, 1);
     font-size: 30px;
+}
+.false {
+    color: red;
+    margin-top: 5px;
+    max-width: 30px;
+}
+.new{
+    border: 1px solid #ee2222;
+}
+@media screen and (min-width: 1024px) {
+    #formulator {
+        height: 26rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+    }
 }

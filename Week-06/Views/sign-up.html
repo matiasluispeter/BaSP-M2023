@@ -5,11 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Sign-up </title>
+        <link rel="stylesheet" href="../css/resets.css">
         <link rel="stylesheet" href="../css/sign-up.css">
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/resets.css">
         <link rel="stylesheet" href="../css/style.css">
+        <script defer src="../js/sign-up.js"></script>
     </head>
     <body>
         <header>
@@ -19,54 +20,70 @@
         </header>
         <main>
             <div class="general-sign-up">
+                <img src="../../assets/img/back.png" alt="back-logoship" class="back">
                 <img src="../../assets/img/logo-rr.png" alt="radium-logoship" class="radium-logo">
-                <form>
-                    <label for="Name" class="file">
+                <form id="form">
+                    <label for="nameFirst" class="file">
                         Name <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
-                        <input type="text" name="fname" placeholder="complete this field">
+                        <input type="text" id="nameFirst" placeholder="complete this field">
                     </label>
-                    <label for="lname" class="file">
-                        Last Name <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
-                        <input type="text" name="lname" placeholder="complete this field">
+                    <div id="false1" class="false"></div>
+                    <label for="surname" class="file">
+                        Surname <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
+                        <input type="text" name="surname" placeholder="complete this field">
                     </label>
+                    <div id="false2">Letters only and must be more than 3 letters</div>
                     <label for="DNI" class="file">
                         DNI <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
                         <input type="text" name="DNI" placeholder="complete this field">
                     </label>
-                    <label for="Born date" class="file">
+                    <div id="false3">Only numbers and must have more than 7 numbers</div>
+                    <label for="bornDate" class="file">
                         Born date <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
-                        <input type="date" name="Born date" placeholder="complete this field">
+                        <input type="date" name="bornDate" placeholder="complete this field">
                     </label>
-                    <label for="Place" class="file">
+                    <div id="false4"> With dd/mm/yyyy format</div>
+                    <label for="place" class="file">
+                        Telephone <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
+                        <input type="text" name="place" placeholder="complete this field">
+                    </label>
+                    <div id="false5">Only numbers</div>
+                    <label for="place" class="file">
                         Place <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
-                        <input type="text" name="Place" placeholder="complete this field">
+                        <input type="text" name="place" placeholder="complete this field">
                     </label>
-                    <label for="Postal Code" class="file">
+                    <div id="false5">Only numbers</div>
+                    <label for="town" class="file">
+                        town <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
+                        <input type="text" name="place" placeholder="complete this field">
+                    </label>
+                    <div id="false7">Only numbers</div>
+                    <label for="postal Code" class="file">
                         Postal Code <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
-                        <input type="text" name="Postal Code" placeholder="complete this field">
+                        <input type="text" name="postal Code" placeholder="complete this field">
                     </label>
-                    <label for="E-mail" class="file">
+                    <div id="false8">At least 5 characters with letters, numbers and a space in between</div>
+                    <label for="e-mail" class="file">
                         E-mail <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
                         <input type="text" name="E-mail" placeholder="complete this field">
                     </label> 
-                    <label for="User" class="file">
-                        User <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
-                        <input type="text" name="User" placeholder="complete this field">
-                    </label>
-                    <label for="Password" class="file">
+                    <div id="false9">You must have a valid email format.</div>
+                    <label for="password" class="file">
                         Password <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
-                        <input type="password" name="Password" placeholder="complete this field">
+                        <input type="password" name="password" placeholder="complete this field">
                     </label>
-                    <label for="Repeat Password" class="file">
+                    <div id="false10">At least 8 characters, consisting of letters and numbers.</div>
+                    <label for="repeatPassword" class="file">
                         Repeat password <img src="../../assets/img/icone-point-d-interrogation-question-gris.png" class="icone-question" alt="Question icone">
-                        <input type="password" name="Repeat Password" placeholder="complete this field">
+                        <input type="password" name="repeatPassword" placeholder="complete this field">
                     </label>
+                    <div id="false11">At least 8 characters, consisting of letters and numbers.</div>
+                    <div class="acept">
+                        <label for="claim">Acept terms and conditions?</label>
+                        <input type="radio" id= "claim" name="Acept terms and conditons" placeholder="claim">
+                    </div>
+                    <input type="submit" value="Register" class="button">
                 </form>
-                <div class="acept">
-                    <label for="claim">Acept terms and conditions?</label>
-                    <input type="radio" id= "claim" name="Acept terms and conditons" placeholder="claim">
-                </div>
-                <button class="register">Register</button>
             </div>
             <img src="../../assets/img/Imagen - Dumbell.png" alt="man with a dumbeel" class="man-dumbel">
         </main>
