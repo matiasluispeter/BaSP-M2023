@@ -33,11 +33,16 @@ main {
     align-items: center;
     justify-content: center;
 }
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
 .file {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: start;
+    align-items: normal;
     margin: 1rem 0;
     color: rgba(55, 56, 103, 1);
     font-size: 14px;
@@ -72,14 +77,15 @@ main {
 .false {
     color: red;
     margin-top: 5px;
-    max-width: 30px;
+    max-width: 50%;
+    font-size: 10px;
 }
 .border{
     border: 1px solid #ee2222;
 }
 @media screen and (min-width: 1024px) {
-    #formulator {
-        height: 26rem;
+    .form {
+        height: 33rem;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
