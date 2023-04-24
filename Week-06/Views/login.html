@@ -9,35 +9,41 @@
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="./login.css">
-        <link rel="stylesheet" href="../css/sign-up.css">
+        <link rel="stylesheet" href="../css/login.css">
+        <script defer src="../js/log-in.js"></script>
     </head>
     <body>
         <header>
-            <img src="../../assets/img/menu.png" alt="menu logoship" class="menu-logoship">
-            <img src="../../assets/img/LOGO-RR 2 1.png" alt="Radium Rocket logoship" class="radium-logoship-header">
+            <img src="../../assets/img/LOGO-RR 2 1.png" alt="Radium Rocket logoship">
             <h1 class="h1">MEGAROCKET S.A</h1>
         </header>
         <main>
-            <img src="../../assets/img/Imagen - Dumbell.png" alt=""> 
-            <div class="general-sign-up">
-                <div class="section-first">
-                    <img src="../../assets/img/logo-rr.jpg" alt="radium-logoship" class="radium-logo">
-                    <form class="columns-inputs">
-                        <label for="User" class="aling-row">
-                            User <img src="../../assets/img/Logo - User.png" alt="User-logoship">
-                            <input type="text" name="User" placeholder="complete this field">
-                        </label>    
-                        <label for="Password" class="aling-row">
-                            Password <img src="../../assets/img/Logo - Password.png" alt="logo-password-logoship">
-                            <input type="text" name="Password" placeholder="you must complete this">
-                        </label>
-                    </form>
+            <div class="images">
+                <img src="../../assets/img/back.png" alt="back-logoship" class="back">
+                <img src="../../assets/img/LOGO-RR 2 1.png" alt="logo of radium" class="radium-logo">
+            </div> 
+            <div class="general-log-in">
+                <img src="../../assets/img/logo-rr.jpg" alt="radium-logoship" class="radium-logo">
+                <form id="form" class="form">
+                    <label for="e-mail">E-mail</label>    
+                    <div class="aling">
+                        <img src="../../assets/img/Logo - User.png" alt="User-logoship">
+                        <input type="text" id="e-mail" placeholder="complete this field">
+                    </div>
+                    <div id="falseA" class="false"></div>
+                    <label for="Password">Password</label>
+                    <div class="aling">
+                        <img src="../../assets/img/Logo - Password.png" alt="logo-password-logoship">
+                        <input type="text" id="password" placeholder="you must complete this">
+                    </div>
+                    <div id="falseB" class="false"></div>
+                </form>
+                <div class="acept">
                     <input type="radio" id="make-query" name="make-query" placeholder="query">
                     <p>Keep me signed</p>
                     <a href="Forgot paassword?"></a>
-                    <button>Login</button>
                 </div>
+                <input type="submit" value="Log" class="button">
             </div>
         </main>
         <footer class="footer">

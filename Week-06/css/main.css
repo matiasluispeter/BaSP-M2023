@@ -30,7 +30,7 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-image: url(../img/hombre.png);
+    background-image: url(../../assets/img/hombre.png);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -127,7 +127,7 @@ main {
 .text-dumbeel {
     width: 100%;
     padding: 10rem 3rem; 
-    background-image: url(../img/dumbell\,rush.png);
+    background-image: url(../../assets/img/dumbell\,rush.png);
     background-size: cover;
     background-position: center;
     color: white;
@@ -318,7 +318,7 @@ main {
         padding: 4rem;
         margin-left: 5rem;
         width: 80%;
-        background-image: url(../img/mujer-mancuerna.png);
+        background-image: url(../../assets/img/mujer-mancuerna.png);
     }
     .activities-memberships {
         flex-direction: row;

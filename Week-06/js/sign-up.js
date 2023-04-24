@@ -1,3 +1,8 @@
+var backImage = document.querySelector('.back');
+backImage.addEventListener('click', function() {
+  window.location.href = 'index.html';
+});
+//letters validations
 function validateLetters(str) {
     var file = str.toLowerCase();
     var letter = "abcdefghijkmnopqrstvwxyz";
@@ -5,15 +10,30 @@ function validateLetters(str) {
 
 for (var i = 0; i< file.length; i++) {
     for (var j = 0; j < letter.length; j++) {
-        if (file.substring(i, i+1) === letter.substring(j, j+1) || NaN){
+        if (str === letter.substring(j, j+1)){
             cont++;
             break;
         }
     }
 }
-return cont == file.length;
+return cont == str.length;
+}
+//number validations
+function validateNumbers(str) {
+    var file = "0123456789";
+    var cont = 0;
+
+    for (var j = 0; j < file.length; j++) {
+        if(str === file.substring(j, j+1)) {
+            cont++;
+            break;
+        }
+    }
+    return cont == str.length;
 }
 
+
+//alphanumeric validations
 function validateAlphanumeric(str) {
     var letter = str.toLowerCase();
     var letterGrammar = "abcdefghijkmnopqrstvwxyz";
@@ -102,18 +122,19 @@ dni.addEventListener ('focus', function() {
 
 function validateDni() {
     var dniValue = dni.value;
+
+    var isValid = true
     if (isNaN(dniValue) || dniValue.length !==8) {
-        var isValid = false;
+        isValid = false;
         dni.classList.add ('border')
         msjdni.textContent = 'Only numbers and must have more than 7 numbers'
     }
     if (dniValue == 8 || (dniValue = '')) {
-        isValid = true;
+        isValid = true
         dni.classList.remove('border')
         msjdni.textContent = ''
     }
 }
-
 //Born date
 var bornDate = document.getElementById('bornDate');
 var msjBornDate = document.getElementById('false4');
@@ -125,36 +146,51 @@ bornDate.addEventListener('focus', function() {
 });
 
 function validateBornDate() {
-    var bornDateValue = bornDate.value;
+  var bornDateValue = bornDate.value;
 
-    if (!bornDateValue) {
-        var isValid = false
-        bornDate.classList.add('border');
-        msjBornDate.textContent = 'You must get into a born date';
+  if (!bornDateValue) {
+    bornDate.classList.add('border');
+    msjBornDate.textContent = 'You must enter a birth date';
     return;
-    }
+  }
 
-    var parts = bornDateValue.split('/');
-    if (parts.length !== 3) {
-        isValid = false
-        bornDate.classList.add('border');
-        msjBornDate.textContent = 'you must get into a born date with dd/mm/aaaa format';
+  var parts = bornDateValue.split('/');
+  if (parts.length !== 3) {
+    bornDate.classList.add('border');
+    msjBornDate.textContent = 'You must enter a birth date in the format dd/mm/yyyy';
     return;
-    }
+  }
 
-    var day = parseInt(parts[0], 10);
-    var month = parseInt(parts[1], 10);
-    var year = parseInt(parts[2], 10);
+  var day = parseInt(parts[0], 10);
+  var month = parseInt(parts[1], 10);
+  var year = parseInt(parts[2], 10);
 
-    if (isNaN(day) || isNaN(month) || isNaN(year) || day < 1 || day > 31 || month < 1 || month > 12 || year < 1900 || year > 2100) {
-        isValid = false
-        bornDate.classList.add('border');
-        msjBornDate.textContent = 'You must get into a valid born date';
+  if (validateNumbers(day) || validateNumbers(month) || validateNumbers(year)) {
+    bornDate.classList.add('border');
+    msjBornDate.textContent = 'You must enter a valid birth date';
     return;
-    }
-    isValid = true
-    bornDate.classList.remove('border');
-    msjBornDate.textContent = '';
+  }
+
+  if (day < 1 || day > 31) {
+    bornDate.classList.add('border');
+    msjBornDate.textContent = 'You must enter a valid day (1-31)';
+    return;
+  }
+
+  if (month < 1 || month > 12) {
+    bornDate.classList.add('border');
+    msjBornDate.textContent = 'You must enter a valid month (1-12)';
+    return;
+  }
+
+  if (year < 1900 || year > 2100) {
+    bornDate.classList.add('border');
+    msjBornDate.textContent = 'You must enter a valid year (1900-2100)';
+    return;
+  }
+
+  bornDate.classList.remove('border');
+  msjBornDate.textContent = '';
 }
 
 //telephone
@@ -170,7 +206,7 @@ telephone.addEventListener('focus', function() {
 
 function validateTelephone() {
   var telephoneValue = telephone.value;
-  if (isNaN(telephoneValue) || telephoneValue.length !== 10) {
+  if (validateNumbers(telephoneValue) || telephoneValue.length !== 10) {
     isValid = false
     telephone.classList.add('border');
     msjTelephone.textContent = 'Only numbers and must have 10 numbers';
@@ -224,19 +260,17 @@ town.addEventListener('focus', function() {
         var spaceIndex = townValue.indexOf(' ');
         console.log (spaceIndex)
     
-        var isValid = true
-        if(!validateAlphanumeric(townValue) || (townValue.length < 3)){
-            isValid = false;
+        if (!validateAlphanumeric(nameValue) || nameValue.length < 3) {
+          }      
         } 
         if(isValid) {
             address.classList.remove('border');
             msjTown.textContent = '';   
         } else {
+            var isValid = false
             address.classList.add ('border');
             msjTown.textContent = 'Must have an alphanumeric code'
         }
-    }
-
 
 //Postal code
 var postalCode = document.getElementById('postal Code');
@@ -251,7 +285,7 @@ postalCode.addEventListener('focus', function() {
 function validatePostalCode() {
     var postalCodeValue = postalCode.value;
     var isValid = true
-    if (isNaN(postalCodeValue) || postalCodeValue.length < 4 || postalCodeValue.length > 5) {
+    if (validateNumbers(postalCodeValue) || postalCodeValue.length < 4 || postalCodeValue.length > 5) {
         isValid = false
         postalCode.classList.add('border');
         falsePostalCode.textContent = 'Only numbers and must have between 4 and 5 numbers';
@@ -268,7 +302,7 @@ var msjEmail = document.getElementById('false9');
 emailInput.addEventListener('blur', validateEmail);
 emailInput.addEventListener('focus', function() {
   msjEmail.textContent = '';
-  emailInput.classList.remove('red', 'border');
+  emailInput.classList.remove('border');
 });
 
 function validateEmail() {
@@ -300,7 +334,7 @@ var msjPassword = document.getElementById('false10');
 passwordInput.addEventListener('blur', validatePassword);
 passwordInput.addEventListener('focus', function() {
   msjPassword.textContent = '';
-  passwordInput.classList.remove('red', 'border');
+  passwordInput.classList.remove('border');
 });
 
 function validatePassword() {
@@ -407,7 +441,6 @@ function send (){
             repeatPasswordInput.value
             )
     }
-
 }
 
 

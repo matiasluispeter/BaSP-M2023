@@ -1,22 +1,12 @@
-.h1text {
-    color: black !important;
-}
+
 body {
     display: flex;
     flex-direction: column;
-}
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
 }
 main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-.menu-logoship {
-    display: none;
 }
 .back {
     display: flex;
@@ -48,6 +38,9 @@ main {
     font-size: 14px;
     font-weight: bold;
 }
+.file input {
+    font-size: 10px;
+}
 .acept {
     display: flex;
     flex-direction: row;
@@ -63,17 +56,6 @@ main {
     width: 130px;
     margin: 2rem;
 }
-.button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 36px;
-    margin: 2rem;
-    color: rgba(55, 56, 103, 1);
-    background-color: rgba(170, 206, 155, 1);
-    font-size: 30px;
-}
 .false {
     color: red;
     margin-top: 5px;
@@ -85,11 +67,14 @@ main {
 }
 @media screen and (min-width: 1024px) {
     .form {
-        height: 33rem;
+        height: 40rem;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         width: 100%;
         align-items: center;
+    }
+    .file input {
+        font-size: 20px;
     }
 }
