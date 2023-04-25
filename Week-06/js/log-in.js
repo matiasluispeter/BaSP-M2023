@@ -85,7 +85,7 @@ function validateEmail() {
 
 //password
 var passwordInput = document.getElementById('password');
-var msjPassword = document.getElementById('false10');
+var msjPassword = document.getElementById('falseB');
 
 passwordInput.addEventListener('blur', validatePassword);
 passwordInput.addEventListener('focus', function() {

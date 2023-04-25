@@ -10,7 +10,10 @@
         <link rel="stylesheet" href="../css/aside.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/header.css">
+
         <link rel="stylesheet" href="../css/main.css">
+        <script defer src="../js/contact.js"></script>
     </head>
     <body>
         <aside> 
@@ -123,21 +126,24 @@
                         <h2>CONTACT</h2>
                         <img src="../../assets/img/mail.png" alt="mail logoship">
                     </div>
-                    <form class="aling-column">
+                    <form class="aling-column" id="form">
                         <label for="Name" class="aling-row">
                             Name
-                            <input type="text" name="fname" placeholder="Insert your name">
+                            <input type="text" id="fname" placeholder="Insert your name">
                         </label>
+                        <div id="false1" class="false"></div>
                         <label for="lname" class="aling-row">
                             Surname
-                            <input type="text" name="lname" placeholder="Insert your surname">
+                            <input type="text" id="lname" placeholder="Insert your surname">
                         </label>
+                        <div id="false2" class="false"></div>
                         <label for="E-mail" class="aling-row">
                             E-mail
-                            <input type="text" name="E-mail" placeholder="insert your e-mail">
+                            <input type="text" id="E-mail" placeholder="insert your e-mail">
                         </label>
+                        <div id="false3" class="false"></div>
                         <h3 class="reason">Reason for contact:</h3>
-                        <ul>
+                        <ul id="reason">
                             <li>
                                 <input type="radio" id="make-query" name="make-query" placeholder="query">
                                 <label for="make-query">I want to make a query or suggestion</label>
