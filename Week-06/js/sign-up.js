@@ -1,26 +1,29 @@
+// Back
 var backImage = document.querySelector('.back');
 backImage.addEventListener('click', function() {
   window.location.href = 'index.html';
 });
+
 //letters validations
 function validateLetters(str) {
     var file = str.toLowerCase();
-    var letter = "abcdefghijkmnopqrstvwxyz";
+    var letter = 'abcdefghijkmnopqrstvwxyz';
     var cont = 0;
 
 for (var i = 0; i< file.length; i++) {
     for (var j = 0; j < letter.length; j++) {
-        if (str === letter.substring(j, j+1)){
+        if (file.substring(i, i+1) === letter.substring(j, j+1)){
             cont++;
             break;
         }
     }
 }
-return cont == str.length;
+return cont == file.length;
+
 }
 //number validations
 function validateNumbers(str) {
-    var file = "0123456789";
+    var file = '0123456789';
     var cont = 0;
 
     for (var j = 0; j < file.length; j++) {
@@ -32,30 +35,23 @@ function validateNumbers(str) {
     return cont == str.length;
 }
 
-
 //alphanumeric validations
 function validateAlphanumeric(str) {
     var letter = str.toLowerCase();
-    var letterGrammar = "abcdefghijkmnopqrstvwxyz";
-    var contLetter = 0;
-    var contNumber = 0
+    var contLetter = 0, contNumber = 0;
 
-    for (var i = 0; i< letter.length; i++) {
-        for (var j = 0; j < letterGrammar.length; j++) {
-            if (letter.substring(i, i+1) === letterGrammar.substring(j, j+1)){
-                contLetter++;
-                break;
-            }
-            else if ( !isNaN(letter.substring(i, i+1))){
-                contNumber++;
-                break;
-            }
+    for (var i = 0; i < letter.length; i++) {
+        if (validateLetters(letter.substring(i, i+1))){
+            contLetter++;
+        } else if(validateNumbers(letter.substring(i, i+1))){
+            contNumber++;
         }
     }
-    if (contLetter > 0 && contNumber > 0) {
-        return (contLetter + contNumber ) == letter.length;
-    } else { return (false) }
-
+    if(contLetter > 0 && contNumber > 0) {
+        return (contNumber + contLetter) == letter.length;
+    } else {
+        return false;
+    }        
 }
 //name
 var nameFirst = document.getElementById('nameFirst');
@@ -74,40 +70,39 @@ nameFirst.classList.remove('border')
     if (!validateLetters(nameValue) || nameValue.length < 3) {
       isValid = false;
     }
-    if ((isValid) || (nameValue == "")) {
-      msj.textContent = "";
+    if ((isValid) || (nameValue == '')) {
+      msj.textContent = '';
       nameFirst.classList.remove('border')
     } else {
         nameFirst.classList.add('border')
-      msj.textContent = "Must contain only letters and 3 or more characteres";
+        msj.textContent = 'Must contain only letters and 3 or more characteres';
     }
   }
 
 //surname
 var surname = document.getElementById('surname');
 var msjSurname = document.getElementById('false2');
-console.log(surname)
-
-surname.addEventListener('blur', validateSurname())
+surname.addEventListener('blur', validateSurname)
 surname.addEventListener('focus', function() {
     msjSurname.textContent = ''
-surname.classList.remove('border')
+    surname.classList.remove('border')
 })
-function validateSurname() {
+
+function validateSurname(){
     var surnameValue = surname.value.trim();
     var isValid = true;
-    
-    if (validateLetters(surnameValue) || surname.length < 3) {
-        isValid = false;
+   
+    if (!validateLetters(surnameValue) || surnameValue.length < 3) {
+      isValid = false;
     }
-    if ((isValid) || (surnameValue == "")) {
-        msjSurname.textContent = "";
-        surname.classList.remove('border')
+    if ((isValid) || (surnameValue == '')) {
+      msjSurname.textContent = '';
+      surname.classList.remove('border')
     } else {
         surname.classList.add('border')
-        msjSurname.textContent = "Must contain only letters and 3 or more characteres";
+        msjSurname.textContent = 'Must contain only letters and 3 or more characteres';
     }
-}
+  }
 
 //dni
 var dni = document.getElementById('DNI')
@@ -153,46 +148,15 @@ function validateBornDate() {
     msjBornDate.textContent = 'You must enter a birth date';
     return;
   }
-
-  var parts = bornDateValue.split('/');
-  if (parts.length !== 3) {
-    bornDate.classList.add('border');
-    msjBornDate.textContent = 'You must enter a birth date in the format dd/mm/yyyy';
-    return;
-  }
-
-  var day = parseInt(parts[0], 10);
-  var month = parseInt(parts[1], 10);
-  var year = parseInt(parts[2], 10);
-
-  if (validateNumbers(day) || validateNumbers(month) || validateNumbers(year)) {
-    bornDate.classList.add('border');
-    msjBornDate.textContent = 'You must enter a valid birth date';
-    return;
-  }
-
-  if (day < 1 || day > 31) {
-    bornDate.classList.add('border');
-    msjBornDate.textContent = 'You must enter a valid day (1-31)';
-    return;
-  }
-
-  if (month < 1 || month > 12) {
-    bornDate.classList.add('border');
-    msjBornDate.textContent = 'You must enter a valid month (1-12)';
-    return;
-  }
-
-  if (year < 1900 || year > 2100) {
+  if (bornDateValue.substring(0,4) < 1900 || bornDateValue.substring(0,4) > 2023) {
     bornDate.classList.add('border');
     msjBornDate.textContent = 'You must enter a valid year (1900-2100)';
     return;
-  }
-
-  bornDate.classList.remove('border');
-  msjBornDate.textContent = '';
+  } else {
+    bornDate.classList.remove('border');
+    msjBornDate.textContent = '';
+    }
 }
-
 //telephone
 
 var telephone = document.getElementById('telephone');
@@ -233,7 +197,7 @@ function validateAddress() {
     console.log (spaceIndex)
 
     var isValid = true
-    if(!validateAlphanumeric(addressValue) || (addressValue.length < 5) || (spaceIndex < 3)){
+    if(validateAlphanumeric(addressValue) || (addressValue.length < 5) || (spaceIndex < 3)){
         isValid = false;
     } 
     if(isValid) {
@@ -241,8 +205,9 @@ function validateAddress() {
         msjAddress.textContent = '';   
     } else {
         address.classList.add ('border');
-        msjAddress.textContent = 'Must have an alphanumeric code'
+        msjAddress.textContent = 'Must have an alphanumeric code, space and more than 5 characters'
     }
+    
 }   
         
 //town
@@ -257,21 +222,19 @@ town.addEventListener('focus', function() {
     
 function validateTown() {
     var townValue = town.value;
-    var spaceIndex = townValue.indexOf(' ');
-    console.log (spaceIndex)
-
-    if (!validateAlphanumeric(nameValue) || nameValue.length < 3) {
+    var isValid = true
+    if (!validateAlphanumeric (townValue) || townValue.length < 3 || (townValue == '')) {
+        isValid = false
         }      
-    } 
     if(isValid) {
         address.classList.remove('border');
         msjTown.textContent = '';   
     } else {
-        var isValid = false
-        address.classList.add ('border');
+        isValid = false
+        town.classList.add('border');
         msjTown.textContent = 'Must have an alphanumeric code'
     }
-
+}
 //Postal code
 var postalCode = document.getElementById('postal Code');
 var falsePostalCode = document.getElementById('false8');
@@ -315,7 +278,7 @@ function validateEmail() {
     return;
     }
 
-    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    var emailRegex =  /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
     if (emailRegex.test(emailValue)) {
         emailInput.classList.remove('border');
@@ -396,11 +359,8 @@ function validateRepeatPassword() {
 //form
 
 var form = document.getElementById('form')
-console.log(form)
-form.addEventListener('submit', send)
-form.preventDefault()
-
-function send (){
+form.addEventListener("submit", function(e) {
+    e.preventDefault()
     if(
         nameFirst.classList.contains('border') 
         || surname.classList.contains('border')
@@ -416,21 +376,20 @@ function send (){
     )
         alert ('incorrect data');
     else {
-        alert (
-            nameFirst.value + ' ' + 
-            surname.value + ' ' + 
-            dni.value + ' ' + 
-            address.value + ' ' + 
-            postalCode.value + ' ' + 
-            telephone.value + ' ' + 
-            town.value + ' ' + 
-            emailInput.value + ' ' + 
-            bornDate.value + ' ' + 
-            passwordInput.value + ' ' + 
-            repeatPasswordInput.value
+        alert ( 'Name: '+nameFirst.value + ' ' + 
+            '\n Surname: '+surname.value + ' ' + 
+            '\n DNI: '+dni.value + ' ' + 
+            '\n address: '+address.value + ' ' + 
+            '\n Postal code: '+postalCode.value + ' ' + 
+            '\n telephone: '+telephone.value + ' ' + 
+            '\n Town: '+town.value + ' ' + 
+            '\n e-mail: '+emailInput.value + ' ' + 
+            '\n borndate: '+bornDate.value + ' ' + 
+            '\n password: '+passwordInput.value + ' ' + 
+            '\n repeatpassword: '+repeatPasswordInput.value
             )
     }
-}
+})
 
 
 
