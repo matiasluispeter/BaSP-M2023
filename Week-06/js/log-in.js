@@ -18,7 +18,6 @@ for (var i = 0; i< file.length; i++) {
     }
 }
 return cont == file.length;
-
 }
 
 //number validations

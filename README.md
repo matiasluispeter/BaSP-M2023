@@ -15,6 +15,9 @@ I develop the css project using responsing. I used display flex. In addition to 
 I did the exercises of Java Script using ECMAScript5. It was based on 6 differents thems. Variables and operators, strings, arrays, if and else, for and functions. On the other hand i fix the html and css with de corrections.
 i corrected the logoship of the header, the heights into the sections, the picture in section 4, the height of the 
 footer and the font size in the aside. In addition to this, i did the corrections in the html.
+## In the week 06
+[GitHub Pages](https://matiasluispeter.github.io/BaSP-M2023/Week-06/Views/index.html)
+I did the sign up and log in html and css to fix. I reusesed some class from the landing page from week 04 and connect the landing page width the sign up and log in. On the other hand i did a Java Script project to the log in and sign up, here i developed all the requerements which are in the "requierements" folder into the week 06 folder. This last folder have a css, a js, a requierements and a views. During the week i commit and pushed on GitHub.
 ## Matías Peter
 
  
