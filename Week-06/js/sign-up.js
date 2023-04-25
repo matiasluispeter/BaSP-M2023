@@ -1,7 +1,7 @@
 // Back
 var backImage = document.querySelector('.back');
 backImage.addEventListener('click', function() {
-  window.location.href = 'index.html';
+window.location.href = 'index.html';
 });
 
 //letters validations
@@ -19,8 +19,8 @@ for (var i = 0; i< file.length; i++) {
     }
 }
 return cont == file.length;
-
 }
+
 //number validations
 function validateNumbers(str) {
     var file = '0123456789';
@@ -53,6 +53,7 @@ function validateAlphanumeric(str) {
         return false;
     }        
 }
+
 //name
 var nameFirst = document.getElementById('nameFirst');
 var msj = document.getElementById('false1');
@@ -130,6 +131,7 @@ function validateDni() {
         msjdni.textContent = ''
     }
 }
+
 //Born date
 var bornDate = document.getElementById('bornDate');
 var msjBornDate = document.getElementById('false4');
@@ -157,8 +159,8 @@ function validateBornDate() {
     msjBornDate.textContent = '';
     }
 }
-//telephone
 
+//telephone
 var telephone = document.getElementById('telephone');
 var msjTelephone = document.getElementById('false5');
 
@@ -206,8 +208,7 @@ function validateAddress() {
     } else {
         address.classList.add ('border');
         msjAddress.textContent = 'Must have an alphanumeric code, space and more than 5 characters'
-    }
-    
+    }    
 }   
         
 //town
@@ -223,7 +224,7 @@ town.addEventListener('focus', function() {
 function validateTown() {
     var townValue = town.value;
     var isValid = true
-    if (!validateAlphanumeric (townValue) || townValue.length < 3 || (townValue == '')) {
+    if (!validateAlphanumeric(townValue) || townValue.length < 3 || (townValue == '')) {
         isValid = false
         }      
     if(isValid) {
@@ -235,6 +236,7 @@ function validateTown() {
         msjTown.textContent = 'Must have an alphanumeric code'
     }
 }
+
 //Postal code
 var postalCode = document.getElementById('postal Code');
 var falsePostalCode = document.getElementById('false8');
@@ -277,9 +279,7 @@ function validateEmail() {
         msjEmail.textContent = 'you must get into an e-mail';
     return;
     }
-
     var emailRegex =  /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-
     if (emailRegex.test(emailValue)) {
         emailInput.classList.remove('border');
         msjEmail.textContent = '';
@@ -320,7 +320,7 @@ function validatePassword() {
         passwordInput.classList.remove('border');
         msjPassword.textContent = '';
     }
-    }
+}
     
 
 //repeat password
@@ -344,20 +344,17 @@ function validateRepeatPassword() {
         msjRepeatPassword.textContent = 'Enter the password again';
     return;
     }
-
     if (passwordValue !== repeatPasswordValue) {
         isValid = false
         repeatPasswordInput.classList.add('border');
         msjRepeatPassword.textContent = 'The passwords are not the same';
     return;
     }
-
     repeatPasswordInput.classList.remove('border');
     msjRepeatPassword.textContent = '';
 }
 
 //form
-
 var form = document.getElementById('form')
 form.addEventListener("submit", function(e) {
     e.preventDefault()

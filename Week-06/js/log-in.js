@@ -2,6 +2,7 @@ var backImage = document.querySelector('.back');
 backImage.addEventListener('click', function() {
   window.location.href = 'index.html';
 });
+
 //letters validations
 function validateLetters(str) {
     var file = str.toLowerCase();
@@ -19,6 +20,7 @@ for (var i = 0; i< file.length; i++) {
 return cont == file.length;
 
 }
+
 //number validations
 function validateNumbers(str) {
     var file = '0123456789';
@@ -51,6 +53,7 @@ function validateAlphanumeric(str) {
         return false;
     }        
 }
+
 //e-mail
 var emailInput = document.getElementById('e-mail');
 var msjEmail = document.getElementById('falseA');
