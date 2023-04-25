@@ -124,7 +124,7 @@ function validateDni() {
     var dniValue = dni.value;
 
     var isValid = true
-    if (isNaN(dniValue) || dniValue.length !==8) {
+    if (validateNumbers(dniValue) || dniValue.length !==8) {
         isValid = false;
         dni.classList.add ('border')
         msjdni.textContent = 'Only numbers and must have more than 7 numbers'
@@ -255,22 +255,22 @@ town.addEventListener('focus', function() {
     town.classList.remove('border');
 });
     
-    function validateTown() {
-        var townValue = town.value;
-        var spaceIndex = townValue.indexOf(' ');
-        console.log (spaceIndex)
-    
-        if (!validateAlphanumeric(nameValue) || nameValue.length < 3) {
-          }      
-        } 
-        if(isValid) {
-            address.classList.remove('border');
-            msjTown.textContent = '';   
-        } else {
-            var isValid = false
-            address.classList.add ('border');
-            msjTown.textContent = 'Must have an alphanumeric code'
-        }
+function validateTown() {
+    var townValue = town.value;
+    var spaceIndex = townValue.indexOf(' ');
+    console.log (spaceIndex)
+
+    if (!validateAlphanumeric(nameValue) || nameValue.length < 3) {
+        }      
+    } 
+    if(isValid) {
+        address.classList.remove('border');
+        msjTown.textContent = '';   
+    } else {
+        var isValid = false
+        address.classList.add ('border');
+        msjTown.textContent = 'Must have an alphanumeric code'
+    }
 
 //Postal code
 var postalCode = document.getElementById('postal Code');
@@ -340,36 +340,25 @@ passwordInput.addEventListener('focus', function() {
 function validatePassword() {
     var passwordValue = passwordInput.value;
     var isValid = true
-    if (!passwordValue) {
+    if (passwordValue.length == 0) {
         isValid = false
         passwordInput.classList.add('border');
         msjPassword.textContent = 'get into a password';
         return;
     }
-
-    var passwordLength = passwordValue.length;
-    var hasLetter = false;
-    var hasNumber = false;
-
-    for (var i = 0; i < passwordLength; i++) {
-    var currentChar = passwordValue.charAt(i);
-    if (isNaN(currentChar)) {
-        hasLetter = true;
-    } else {
-        hasNumber = true;
-    }
-    }
-
-    if (passwordLength >= 8 && hasLetter && hasNumber) {
-        isValid = true
-        passwordInput.classList.remove('border');
-        msjPassword.textContent = '';
-    } else {
+    if (passwordValue.length < 8 || !validateAlphanumeric(passwordValue)) {
         isValid = false
         passwordInput.classList.add('border');
         msjPassword.textContent = 'you must get into a valid password (min 8 alphanumeric characters)';
+        return;
     }
-}
+    else {
+        isValid = true
+        passwordInput.classList.remove('border');
+        msjPassword.textContent = '';
+    }
+    }
+    
 
 //repeat password
 var passwordInput = document.getElementById('password');

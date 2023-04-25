@@ -1,3 +1,7 @@
+var backImage = document.querySelector('.back');
+backImage.addEventListener('click', function() {
+  window.location.href = 'index.html';
+});
 //e-mail
 var emailInput = document.getElementById('e-mail');
 var msjEmail = document.getElementById('falseA');

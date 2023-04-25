@@ -115,7 +115,7 @@ aside {
 }
 @media (min-width: 480px) {
     aside {
-        position: sticky;
+        position: fixed;
         display: flex;
         flex-direction: column;
         top: 0;

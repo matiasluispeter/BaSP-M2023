@@ -13,13 +13,20 @@ main {
     justify-content: space-around;
 }
 .images {
+    display: none;
     background-image: url(../../assets/img/Image\ -\ Running.png);
     width: 50%;
     height: 100vh;
-    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .back {
-    width: 10px;
+    width: 60px;
+    margin: 1rem 1 rem;
+}
+.logo-back {
+    width: 170px;
+    margin: 0 1rem;
 }
 .radium-logo {
     width: 20%;
@@ -30,13 +37,12 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    align-self: self-end;
 }
 .form {
     display: flex;
     flex-direction: column;
+    align-self: normal;
     width: 50%;
-    margin: 4rem 0;
 }
 .form label {
     font-size: 20px;
@@ -51,13 +57,6 @@ main {
 }
 .aling input {
     margin-left: 5px;
-}
-.acept {
-    display: flex;
-    flex-direction: row;
-    font-size: 14px;
-    font-weight: 400;
-    color: rgba(1, 26, 249, 1);
 }
 .man-dumbel {
     width: 50%;
@@ -81,8 +80,10 @@ main {
 .false {
     color: red;
     margin-top: 5px;
-    max-width: 100%;
+    width: 150px;
     font-size: 10px;
+    margin: 1rem;
+    height: 2vh;
 }
 .border{
     border: 1px solid #ee2222;
@@ -91,5 +92,11 @@ main {
 body {
     display: flex;
     flex-direction: column;
+}
+.images {
+    display: flex;
+}
+.form {
+    align-self: center;
 }
 }
