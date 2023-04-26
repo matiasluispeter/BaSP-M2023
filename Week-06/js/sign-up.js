@@ -71,7 +71,7 @@ nameFirst.classList.remove('border')
     if (!validateLetters(nameValue) || nameValue.length < 3) {
       isValid = false;
     }
-    if ((isValid) || (nameValue == '')) {
+    if (isValid) {
       msj.textContent = '';
       nameFirst.classList.remove('border')
     } else {
@@ -96,7 +96,7 @@ function validateSurname(){
     if (!validateLetters(surnameValue) || surnameValue.length < 3) {
       isValid = false;
     }
-    if ((isValid) || (surnameValue == '')) {
+    if (isValid) {
       msjSurname.textContent = '';
       surname.classList.remove('border')
     } else {
