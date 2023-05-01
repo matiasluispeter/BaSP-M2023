@@ -62,9 +62,10 @@ emailInput.addEventListener('focus', function() {
   msjEmail.textContent = '';
   emailInput.classList.remove('border');
 });
+var emailValue;
 
 function validateEmail() {
-    var emailValue = emailInput.value;
+    emailValue = emailInput.value;
     var isValid = true
     if (!emailValue) {
         isValid = false
@@ -93,8 +94,10 @@ passwordInput.addEventListener('focus', function() {
   passwordInput.classList.remove('border');
 });
 
+var passwordValue;
+
 function validatePassword() {
-    var passwordValue = passwordInput.value;
+    passwordValue = passwordInput.value;
     var isValid = true
     if (passwordValue.length == 0) {
         isValid = false
@@ -102,7 +105,7 @@ function validatePassword() {
         msjPassword.textContent = 'get into a password';
         return;
     }
-    if (passwordValue.length < 8 || !validateAlphanumeric(passwordValue)) {
+    if (passwordValue.length < 8 || validateAlphanumeric(passwordValue)) {
         isValid = false
         passwordInput.classList.add('border');
         msjPassword.textContent = 'you must get into a valid password (min 8 alphanumeric characters)';
@@ -118,19 +121,24 @@ function validatePassword() {
 //form
 var loginButton = document.querySelector('body > main > div.general-log-in > button')
 loginButton.addEventListener("click", function(e) {
-    e.preventDefault()
+e.preventDefault() 
   if (
     emailInput.classList.contains('border') ||
     passwordInput.classList.contains('border')
   ) {
     alert('Incorrect data');
   } else {
-    alert('e-mail: '+emailInput.value + ' ' +
-    '\n password: '+passwordInput.value
-    );
+        var url = 'https://api-rest-server.vercel.app/login?email=' + emailValue + '&password=' + passwordValue;
+
+        fetch(url) 
+            .then(function (response) {
+            return response.json();
+            })
+            .then(function(data) {
+            alert(data.msg);
+            })
+            .catch(function() {
+            alert('error');
+            });
   }
-});
-
-
-
-    
+})

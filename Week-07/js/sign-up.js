@@ -248,10 +248,8 @@ postalCode.addEventListener('focus', function() {
     postalCode.classList.remove('red');
 });
 
-var postalCodeValue;
-
 function validatePostalCode() {
-    postalCodeValue = postalCode.value;
+    var postalCodeValue = postalCode.value;
     var isValid = true
     if (validateNumbers(postalCodeValue) || postalCodeValue.length < 4 || postalCodeValue.length > 5) {
         isValid = false
@@ -388,22 +386,6 @@ form.addEventListener("submit", function(e) {
             '\n password: '+passwordInput.value + ' ' + 
             '\n repeatpassword: '+repeatPasswordInput.value
             )
-            var url = 'https://api-rest-server.vercel.app/signup?email=' + emailValue + '&password=' + passwordValue + 
-            '&name=' + nameValue + '&surname=' + surnameValue + '&dni=' + dniValue + '&address=' + addressValue +
-            '&postal code=' + postalCodeValue + '&telephone=' + telephoneValue + '&town=' + townValue +
-            '&borndate=' + bornDateValue + '&repeatpassword' + repeatPasswordValue; 
-
-
-            fetch(url) 
-                .then(function (response) {
-                return response.json();
-                })
-                .then(function(data) {
-                alert(data.msg);
-                })
-                .catch(function() {
-                alert('error');
-                });
     }
 })
 

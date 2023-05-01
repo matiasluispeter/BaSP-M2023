@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.back {
+    display: flex;
+    align-self: flex-start;
+    margin: 12px 20px;
+}
+header img {
+    display: none;
+}
+.radium-logo {
+    width: 130px;
+    margin: 2rem;
+}
+.icone-question {
+    width: 5px;
+}
+.general-sign-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.file {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: normal;
+    margin: 1rem 0;
+    color: rgba(55, 56, 103, 1);
+    font-size: 14px;
+    font-weight: bold;
+}
+.file input {
+    font-size: 10px;
+}
+.acept {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(1, 26, 249, 1);
+}
+.man-dumbel {
+    display: none;
+    width: 50%;
+}
+.false {
+    color: red;
+    margin-top: 5px;
+    max-width: 100px;
+    font-size: 10px;
+    height: 2vh;
+}
+.border{
+    border: 1px solid #ee2222;
+}
+.sign-up {
+    margin-bottom: 10vh;
+}
+@media screen and (min-width: 1024px) {
+    .form {
+        height: 37rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
+        align-items: center;
+    }
+    .file input {
+        font-size: 20px;
+    }
+    .man-dumbel {
+        display: flex;
+        width: 50%;
+    }
+    .general-sign-up {
+        width: 50%;
+    }
+}
