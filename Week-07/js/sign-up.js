@@ -1,10 +1,7 @@
-// Back
 var backImage = document.querySelector('.back');
 backImage.addEventListener('click', function() {
 window.location.href = 'index.html';
 });
-
-//letters validations
 
 function validateLetters(str) {
   var file = str.toLowerCase();
@@ -22,8 +19,6 @@ function validateLetters(str) {
   return isValid;
 }
 
-
-//number validations
 function validateNumbers(str) {
     var file = '0123456789';
     var cont = 0;
@@ -34,14 +29,12 @@ function validateNumbers(str) {
             break;
         }
     }
-    return cont == str.length;
+    return cont = str.length;
 }
 
-//alphanumeric validations
 function validateAlphanumeric(str) {
     var letter = str.toLowerCase();
     var contLetter = 0, contNumber = 0;
-
     for (var i = 0; i < letter.length; i++) {
         if (validateLetters(letter.substring(i, i+1))){
             contLetter++;
@@ -50,40 +43,34 @@ function validateAlphanumeric(str) {
         }
     }
     if(contLetter > 0 && contNumber > 0) {
-        return (contNumber + contLetter) == letter.length;
+        return (contNumber + contLetter) === letter.length;
     } else {
         return false;
     }        
 }
-
-//name
 var nameFirst = document.getElementById('nameFirst');
 var msj = document.getElementById('false1');
-
-
 nameFirst.addEventListener('blur', validateName)
 nameFirst.addEventListener('focus', function() {
     msj.textContent = ''
 nameFirst.classList.remove('border')
 })
 var nameValue;
-  function validateName(){
-    nameValue = nameFirst.value.trim();
-    var isValid = true;
-   
-    if (!validateLetters(nameValue) || nameValue.length < 3 || nameValue === '') {
-      isValid = false;
-    }
-    if (isValid) {
-      msj.textContent = '';
-      nameFirst.classList.remove('border')
-    } else {
+
+function validateName(){
+nameValue = nameFirst.value.trim();
+var isValid = true;
+    if (!validateLetters(nameValue) || nameValue.length < 3) {
+        isValid = false;
         nameFirst.classList.add('border')
         msj.textContent = 'Must contain only letters and 3 or more characteres';
     }
-  }
+    else {
+        msj.textContent = '';
+        nameFirst.classList.remove('border')
+    }
+}
 
-//surname
 var surname = document.getElementById('surname');
 var msjSurname = document.getElementById('false2');
 surname.addEventListener('blur', validateSurname)
@@ -95,24 +82,19 @@ var surnameValue;
 function validateSurname(){
     surnameValue = surname.value.trim();
     var isValid = true;
-   
-    if (!validateLetters(surnameValue) || surnameValue.length < 3 || surnameValue === '') {
-      isValid = false;
-    }
-    if (isValid) {
-      msjSurname.textContent = '';
-      surname.classList.remove('border')
-    } else {
+    if (!validateLetters(surnameValue) || surnameValue.length < 3) {
+        isValid = false;
         surname.classList.add('border')
         msjSurname.textContent = 'Must contain only letters and 3 or more characteres';
     }
+    else {
+        msjSurname.textContent = '';
+        surname.classList.remove('border')
+    } 
   }
 
-//dni
 var dni = document.getElementById('DNI')
 var msjdni = document.getElementById('false3')
-
-
 dni.addEventListener ('blur', validateDni)
 dni.addEventListener ('focus', function() {
     msjdni.textContent = ''
@@ -123,7 +105,7 @@ function validateDni() {
     dniValue = dni.value;
 
     var isValid = true
-    if (validateNumbers(dniValue) || dniValue.length !==8 || dniValue === '') {
+    if (validateNumbers(dniValue) || dniValue.length !==8) {
         isValid = false;
         dni.classList.add ('border')
         msjdni.textContent = 'Only numbers and must have more than 7 numbers'
@@ -134,18 +116,16 @@ function validateDni() {
     }
 }
 
-//Born date
 var bornDate = document.getElementById('bornDate');
 var msjBornDate = document.getElementById('false4');
-
 bornDate.addEventListener('blur', validateBornDate);
 bornDate.addEventListener('focus', function() {
   msjBornDate.textContent = '';
   bornDate.classList.remove('false', 'border');
 });
-
 var bornDateValue;
 var born;
+
 function validateBornDate() {
   bornDateValue = bornDate.value;
 
@@ -167,7 +147,6 @@ function validateBornDate() {
 }
 
 function format(tool) {
-
     var year = tool.substring(0,4);
     var month = tool.substring(5,7);
     var day = tool.substring(8,10);
@@ -175,40 +154,36 @@ function format(tool) {
     return aux
 }
 
-
-//telephone
 var telephone = document.getElementById('telephone');
 var msjTelephone = document.getElementById('false5');
-
 telephone.addEventListener('blur', validateTelephone);
 telephone.addEventListener('focus', function() {
-  msjTelephone.textContent = '';
-  telephone.classList.remove('border');
+    msjTelephone.textContent = '';
+    telephone.classList.remove('border');
 });
 var telephoneValue;
+
 function validateTelephone() {
     telephoneValue = telephone.value;
     if (validateNumbers(telephoneValue) || telephoneValue.length !== 10) {
-    isValid = false
-    telephone.classList.add('border');
+        isValid = false
+        telephone.classList.add('border');
     msjTelephone.textContent = 'Only numbers and must have 10 numbers';
     } else {
-    isValid = true
-    telephone.classList.remove('border');
-    msjTelephone.textContent = '';
+        telephone.classList.remove('border');
+        msjTelephone.textContent = '';
     }
 }
 
-//address
 var address = document.getElementById('address');
 var msjAddress = document.getElementById('false6');
-
 address.addEventListener('blur', validateAddress);
 address.addEventListener('focus', function() {
     msjAddress.textContent = '';
     address.classList.remove('border');
 });
 var addressValue;
+
 function validateAddress() {
     addressValue = address.value;
     var spaceIndex = addressValue.indexOf(' ');
@@ -222,17 +197,16 @@ function validateAddress() {
         msjAddress.textContent = 'Must have an alphanumeric code, space and more than 5 characters'
     }    
 }   
-        
-//town
+
 var town = document.getElementById('town');
 var msjTown = document.getElementById('false7');
-
 town.addEventListener('blur', validateTown);
 town.addEventListener('focus', function() {
     msjTown.textContent = '';
     town.classList.remove('border');
 });
 var townValue;
+
 function validateTown() { 
     townValue = town.value;
     var isValid = true
@@ -247,16 +221,15 @@ function validateTown() {
     }
 }
 
-//Postal code
 var postalCode = document.getElementById('postal Code');
 var falsePostalCode = document.getElementById('false8');
-
 postalCode.addEventListener('blur', validatePostalCode);
 postalCode.addEventListener('focus', function() {
     falsePostalCode.textContent = '';
     postalCode.classList.remove('red');
 });
 var postalCodeValue;
+
 function validatePostalCode() {
     postalCodeValue = postalCode.value;
     var isValid = true
@@ -271,14 +244,12 @@ function validatePostalCode() {
     }
 }
 
-//e-mail
 var emailInput = document.getElementById('E-mail');
 var msjEmail = document.getElementById('false9');
-
 emailInput.addEventListener('blur', validateEmail);
 emailInput.addEventListener('focus', function() {
-  msjEmail.textContent = '';
-  emailInput.classList.remove('border');
+    msjEmail.textContent = '';
+    emailInput.classList.remove('border');
 });
 var emailValue;
 function validateEmail() {
@@ -301,16 +272,15 @@ function validateEmail() {
     }
 }
 
-//password
 var passwordInput = document.getElementById('password');
 var msjPassword = document.getElementById('false10');
-
 passwordInput.addEventListener('blur', validatePassword);
 passwordInput.addEventListener('focus', function() {
     msjPassword.textContent = '';
     passwordInput.classList.remove('border');
 });
 var passwordValue;
+
 function validatePassword() {
     passwordValue = passwordInput.value;
     var isValid = true
@@ -333,18 +303,16 @@ function validatePassword() {
     }
 }
     
-
-//repeat password
 var passwordInput = document.getElementById('password');
 var repeatPasswordInput = document.getElementById('repeatPassword');
 var msjRepeatPassword = document.getElementById('false11');
-
 repeatPasswordInput.addEventListener('blur', validateRepeatPassword);
 repeatPasswordInput.addEventListener('focus', function() {
   msjRepeatPassword.textContent = '';
   repeatPasswordInput.classList.remove('red', 'border');
 });
 var repeatPasswordValue;
+
 function validateRepeatPassword() {
     passwordValue = passwordInput.value;
     repeatPasswordValue = repeatPasswordInput.value;
@@ -365,8 +333,6 @@ function validateRepeatPassword() {
     msjRepeatPassword.textContent = '';
 }
 
-
-//form
 var form = document.getElementById('form')
 form.addEventListener("submit", function(e) {
     e.preventDefault()
@@ -410,7 +376,7 @@ form.addEventListener("submit", function(e) {
             .catch(function() {
             console.log('error')
             });
-}
+    }
 })
 function loadInfo() {
     localStorage.setItem('name', nameFirst.value)

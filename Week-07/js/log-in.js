@@ -1,26 +1,24 @@
 var backImage = document.querySelector('.back');
 backImage.addEventListener('click', function() {
-  window.location.href = 'index.html';
+    window.location.href = 'index.html';
 });
 
-//letters validations
 function validateLetters(str) {
     var file = str.toLowerCase();
-    var letter = 'abcdefghijkmnopqrstvwxyz';
-    var cont = 0;
-
-for (var i = 0; i< file.length; i++) {
-    for (var j = 0; j < letter.length; j++) {
-        if (file.substring(i, i+1) === letter.substring(j, j+1)){
-            cont++;
-            break;
-        }
+    var letter = 'abcdefghijkmnopqrstvwxyz ';
+    var isValid = true;
+  
+    for (var i = 0; i < file.length; i++) {
+      var currentLetter = file.charAt(i);
+      if (!letter.includes(currentLetter)) {
+        isValid = false;
+        break;
+      }
     }
-}
-return cont == file.length;
-}
-
-//number validations
+  
+    return isValid;
+  }
+  
 function validateNumbers(str) {
     var file = '0123456789';
     var cont = 0;
@@ -34,7 +32,6 @@ function validateNumbers(str) {
     return cont == str.length;
 }
 
-//alphanumeric validations
 function validateAlphanumeric(str) {
     var letter = str.toLowerCase();
     var contLetter = 0, contNumber = 0;
@@ -47,16 +44,14 @@ function validateAlphanumeric(str) {
         }
     }
     if(contLetter > 0 && contNumber > 0) {
-        return (contNumber + contLetter) == letter.length;
+        return (contNumber + contLetter) === letter.length;
     } else {
         return false;
     }        
 }
 
-//e-mail
 var emailInput = document.getElementById('e-mail');
 var msjEmail = document.getElementById('falseA');
-
 emailInput.addEventListener('blur', validateEmail);
 emailInput.addEventListener('focus', function() {
   msjEmail.textContent = '';
@@ -78,20 +73,17 @@ function validateEmail() {
         emailInput.classList.remove('border');
         msjEmail.textContent = '';
     } else {
-        isValid = false
         emailInput.classList.add('border')
         msjEmail.textContent = 'you must get into a valid e-mail';
     }
 }
 
-//password
 var passwordInput = document.getElementById('password');
 var msjPassword = document.getElementById('falseB');
-
 passwordInput.addEventListener('blur', validatePassword);
 passwordInput.addEventListener('focus', function() {
-  msjPassword.textContent = '';
-  passwordInput.classList.remove('border');
+    msjPassword.textContent = '';
+    passwordInput.classList.remove('border');
 });
 
 var passwordValue;
@@ -99,7 +91,7 @@ var passwordValue;
 function validatePassword() {
     passwordValue = passwordInput.value;
     var isValid = true
-    if (passwordValue.length == 0) {
+    if (passwordValue.length === 0) {
         isValid = false
         passwordInput.classList.add('border');
         msjPassword.textContent = 'get into a password';
@@ -112,7 +104,6 @@ function validatePassword() {
         return;
     }
     else {
-        isValid = true
         passwordInput.classList.remove('border');
         msjPassword.textContent = '';
     }
