@@ -58,7 +58,6 @@ function validateAlphanumeric(str) {
     }        
 }
 
-//name
 var nameFirst = document.getElementById('nameFirst');
 var msj = document.getElementById('false1');
 console.log(nameFirst)
@@ -68,23 +67,21 @@ nameFirst.addEventListener('focus', function() {
     msj.textContent = ''
 nameFirst.classList.remove('border')
 })
-  function validateName(){
+
+function validateName(){
     var nameValue = nameFirst.value.trim();
     var isValid = true;
-   
     if (!validateLetters(nameValue) || nameValue.length < 3) {
-      isValid = false;
-    }
-    if (isValid) {
-      msj.textContent = '';
-      nameFirst.classList.remove('border')
-    } else {
+        isValid = false;
         nameFirst.classList.add('border')
         msj.textContent = 'Must contain only letters and 3 or more characteres';
     }
-  }
+    else {
+        msj.textContent = '';
+        nameFirst.classList.remove('border')
+    }
+}
 
-//surname
 var surname = document.getElementById('surname');
 var msjSurname = document.getElementById('false2');
 surname.addEventListener('blur', validateSurname)
@@ -96,20 +93,18 @@ surname.addEventListener('focus', function() {
 function validateSurname(){
     var surnameValue = surname.value.trim();
     var isValid = true;
+    surname.classList.add('border')
+    msjSurname.textContent = 'Must contain only letters and 3 or more characteres';
    
     if (!validateLetters(surnameValue) || surnameValue.length < 3) {
-      isValid = false;
+        isValid = false;
     }
-    if (isValid) {
-      msjSurname.textContent = '';
-      surname.classList.remove('border')
-    } else {
-        surname.classList.add('border')
-        msjSurname.textContent = 'Must contain only letters and 3 or more characteres';
-    }
+    else {
+        msjSurname.textContent = '';
+        surname.classList.remove('border')
+    } 
   }
 
-//dni
 var dni = document.getElementById('DNI')
 var msjdni = document.getElementById('false3')
 console.log(dni)
@@ -136,42 +131,40 @@ function validateDni() {
     }
 }
 
-//Born date
 var bornDate = document.getElementById('bornDate');
 var msjBornDate = document.getElementById('false4');
 
 bornDate.addEventListener('blur', validateBornDate);
 bornDate.addEventListener('focus', function() {
-  msjBornDate.textContent = '';
-  bornDate.classList.remove('false', 'border');
+    msjBornDate.textContent = '';
+    bornDate.classList.remove('false', 'border');
 });
 
 function validateBornDate() {
-  var bornDateValue = bornDate.value;
+var bornDateValue = bornDate.value;
 
-  if (!bornDateValue) {
-    bornDate.classList.add('border');
-    msjBornDate.textContent = 'You must enter a birth date';
+    if (!bornDateValue) {
+        bornDate.classList.add('border');
+        msjBornDate.textContent = 'You must enter a birth date';
     return;
-  }
-  if (bornDateValue.substring(0,4) < 1900 || bornDateValue.substring(0,4) > 2023) {
-    bornDate.classList.add('border');
-    msjBornDate.textContent = 'You must enter a valid year (1900-2100)';
+    }
+    if (bornDateValue.substring(0,4) < 1900 || bornDateValue.substring(0,4) > 2023) {
+        bornDate.classList.add('border');
+        msjBornDate.textContent = 'You must enter a valid year (1900-2100)';
     return;
-  } else {
-    bornDate.classList.remove('border');
-    msjBornDate.textContent = '';
+    } else {
+        bornDate.classList.remove('border');
+        msjBornDate.textContent = '';
     }
 }
 
-//telephone
 var telephone = document.getElementById('telephone');
 var msjTelephone = document.getElementById('false5');
 
 telephone.addEventListener('blur', validateTelephone);
 telephone.addEventListener('focus', function() {
-  msjTelephone.textContent = '';
-  telephone.classList.remove('border');
+    msjTelephone.textContent = '';
+    telephone.classList.remove('border');
 });
 
 function validateTelephone() {
@@ -187,7 +180,6 @@ function validateTelephone() {
   }
 }
 
-//address
 var address = document.getElementById('address');
 var msjAddress = document.getElementById('false6');
 
@@ -215,7 +207,6 @@ function validateAddress() {
     }    
 }   
         
-//town
 var town = document.getElementById('town');
 var msjTown = document.getElementById('false7');
 
@@ -241,7 +232,6 @@ function validateTown() {
     }
 }
 
-//Postal code
 var postalCode = document.getElementById('postal Code');
 var falsePostalCode = document.getElementById('false8');
 
@@ -266,14 +256,13 @@ function validatePostalCode() {
     }
 }
 
-//e-mail
 var emailInput = document.getElementById('E-mail');
 var msjEmail = document.getElementById('false9');
 
 emailInput.addEventListener('blur', validateEmail);
 emailInput.addEventListener('focus', function() {
-  msjEmail.textContent = '';
-  emailInput.classList.remove('border');
+    msjEmail.textContent = '';
+    emailInput.classList.remove('border');
 });
 
 function validateEmail() {
@@ -296,7 +285,6 @@ function validateEmail() {
     }
 }
 
-//password
 var passwordInput = document.getElementById('password');
 var msjPassword = document.getElementById('false10');
 
@@ -328,8 +316,6 @@ function validatePassword() {
     }
 }
     
-
-//repeat password
 var passwordInput = document.getElementById('password');
 var repeatPasswordInput = document.getElementById('repeatPassword');
 var msjRepeatPassword = document.getElementById('false11');
@@ -360,8 +346,6 @@ function validateRepeatPassword() {
     msjRepeatPassword.textContent = '';
 }
 
-
-//form
 var form = document.getElementById('form')
 form.addEventListener("submit", function(e) {
     e.preventDefault()
@@ -411,7 +395,7 @@ form.addEventListener("submit", function(e) {
     }
 })
 
-nameValue = 'matias';
+
 
 
 

@@ -7,20 +7,21 @@ window.location.href = 'index.html';
 //letters validations
 
 function validateLetters(str) {
-    var file = str.toLowerCase();
-    var letter = 'abcdefghijkmnopqrstvwxyz';
-    var cont = 0;
+  var file = str.toLowerCase();
+  var letter = 'abcdefghijkmnopqrstvwxyz ';
+  var isValid = true;
 
-for (var i = 0; i< file.length; i++) {
-    for (var j = 0; j < letter.length; j++) {
-        if (file.substring(i, i+1) === letter.substring(j, j+1)){
-            cont++;
-            break;
-        }
+  for (var i = 0; i < file.length; i++) {
+    var currentLetter = file.charAt(i);
+    if (!letter.includes(currentLetter)) {
+      isValid = false;
+      break;
     }
+  }
+
+  return isValid;
 }
-return cont == file.length;
-}
+
 
 //number validations
 function validateNumbers(str) {
@@ -70,7 +71,7 @@ var nameValue;
     nameValue = nameFirst.value.trim();
     var isValid = true;
    
-    if (!validateLetters(nameValue) || nameValue.length < 3) {
+    if (!validateLetters(nameValue) || nameValue.length < 3 || nameValue === '') {
       isValid = false;
     }
     if (isValid) {
@@ -95,7 +96,7 @@ function validateSurname(){
     surnameValue = surname.value.trim();
     var isValid = true;
    
-    if (!validateLetters(surnameValue) || surnameValue.length < 3) {
+    if (!validateLetters(surnameValue) || surnameValue.length < 3 || surnameValue === '') {
       isValid = false;
     }
     if (isValid) {
@@ -122,7 +123,7 @@ function validateDni() {
     dniValue = dni.value;
 
     var isValid = true
-    if (validateNumbers(dniValue) || dniValue.length !==8) {
+    if (validateNumbers(dniValue) || dniValue.length !==8 || dniValue === '') {
         isValid = false;
         dni.classList.add ('border')
         msjdni.textContent = 'Only numbers and must have more than 7 numbers'
@@ -144,6 +145,7 @@ bornDate.addEventListener('focus', function() {
 });
 
 var bornDateValue;
+var born;
 function validateBornDate() {
   bornDateValue = bornDate.value;
 
@@ -152,20 +154,27 @@ function validateBornDate() {
     msjBornDate.textContent = 'You must enter a birth date';
     return;
   }
-  if (bornDateValue.substring(0,4) < 1900 || bornDateValue.substring(0,4) > 2023) {
+  if (bornDateValue.substring(0,4) < 1900 || bornDateValue.substring(0,4) > 2008) {
     bornDate.classList.add('border');
-    msjBornDate.textContent = 'You must enter a valid year (1900-2100)';
+    msjBornDate.textContent = 'You must enter a valid year (1900-2008)';
     return;
 
   } else {
     bornDate.classList.remove('border');
-    msjBornDate.textContent = '';
-    var year = bornDateValue.substring(0,4);
-    var month = bornDateValue.substring(5,7);
-    var day = bornDateValue.substring(8,10);
-    bornDateValue = month + '/' + day + '/' + year; 
-    }
+    msjBornDate.textContent = ''; 
+    born = format(bornDateValue)
+  }
 }
+
+function format(tool) {
+
+    var year = tool.substring(0,4);
+    var month = tool.substring(5,7);
+    var day = tool.substring(8,10);
+    var aux = month + '/' + day + '/' + year;
+    return aux
+}
+
 
 //telephone
 var telephone = document.getElementById('telephone');
@@ -203,13 +212,9 @@ var addressValue;
 function validateAddress() {
     addressValue = address.value;
     var spaceIndex = addressValue.indexOf(' ');
-    console.log (spaceIndex)
-
     var isValid = true
-    if(validateAlphanumeric(addressValue) || (addressValue.length < 5) || (spaceIndex < 3)){
+    if(validateAlphanumeric(addressValue) || (addressValue.length < 5) || (spaceIndex < 3)) {
         isValid = false;
-    } 
-    if(isValid) {
         address.classList.remove('border');
         msjAddress.textContent = '';   
     } else {
@@ -228,19 +233,17 @@ town.addEventListener('focus', function() {
     town.classList.remove('border');
 });
 var townValue;
-function validateTown() {
+function validateTown() { 
     townValue = town.value;
     var isValid = true
-    if (!validateAlphanumeric(townValue) || townValue.length < 3 || (townValue == '')) {
-        isValid = false
-        }      
-    if(isValid) {
-        address.classList.remove('border');
-        msjTown.textContent = '';   
-    } else {
+    if (townValue.length < 3 || (townValue === '')) {
         isValid = false
         town.classList.add('border');
         msjTown.textContent = 'Must have an alphanumeric code'
+        }      
+    else {
+        address.classList.remove('border');
+        msjTown.textContent = '';   
     }
 }
 
@@ -257,7 +260,8 @@ var postalCodeValue;
 function validatePostalCode() {
     postalCodeValue = postalCode.value;
     var isValid = true
-    if (validateNumbers(postalCodeValue) || postalCodeValue.length < 4 || postalCodeValue.length > 5) {
+    if (validateNumbers(postalCodeValue) || postalCodeValue.length < 4 || postalCodeValue.length > 5 || 
+    postalCodeValue === '') {
         isValid = false
         postalCode.classList.add('border');
         falsePostalCode.textContent = 'Only numbers and must have between 4 and 5 numbers';
@@ -361,6 +365,7 @@ function validateRepeatPassword() {
     msjRepeatPassword.textContent = '';
 }
 
+
 //form
 var form = document.getElementById('form')
 form.addEventListener("submit", function(e) {
@@ -380,43 +385,71 @@ form.addEventListener("submit", function(e) {
     )
         alert ('incorrect data');
     else {
-        alert ( 'Name: '+nameFirst.value + ' ' + 
-            '\n Surname: '+surname.value + ' ' + 
-            '\n DNI: '+dni.value + ' ' + 
-            '\n address: '+address.value + ' ' + 
-            '\n Postal code: '+postalCode.value + ' ' + 
-            '\n telephone: '+telephone.value + ' ' + 
-            '\n Town: '+town.value + ' ' + 
-            '\n e-mail: '+emailInput.value + ' ' + 
-            '\n borndate: '+bornDate.value + ' ' + 
-            '\n password: '+passwordInput.value + ' ' + 
-            '\n repeatpassword: '+repeatPasswordInput.value
-            )
-            var url = 'https://api-rest-server.vercel.app/signup?email=' + emailValue + '&password=' + passwordValue + 
-            '&name=' + nameValue + '&lastName=' + surnameValue + '&dni=' + dniValue + '&address=' + addressValue +
-            '&zip=' + postalCodeValue + '&phone=' + telephoneValue + '&city=' + townValue +
-            '&dob=' + bornDateValue; 
+        born = format(bornDate.value)
+        var url = 'https://api-rest-server.vercel.app/signup?email=' + emailInput.value + '&password=' + passwordInput.value + 
+        '&name=' + nameFirst.value + '&lastName=' + surname.value + '&dni=' + dni.value + '&address=' + address.value +
+        '&zip=' + postalCode.value + '&phone=' + telephone.value + '&city=' + town.value +
+        '&dob=' + born; 
 
-
-            fetch(url) 
-                .then(function (response) {
+        fetch(url) 
+            .then(function (response) {
                 return response.json();
-                })
-                .then(function(info) { 
-                console.log(info);
-                if (info.hasOwnProperty(data)) {
-                    
-
+            })
+            .then(function(data) { 
+                console.log(data)
+                var dataObj = data.data;
+                var strFinal='';
+                for (var key in dataObj) {
+                    if (dataObj.hasOwnProperty(key)) {
+                        strFinal += key + ': ' + dataObj [key]
+                    }
                 }
-                })
-                .catch(function() {
-                alert('error');
-                });
-    }
+                alert(strFinal)
+                loadInfo();
+            })
+            .catch(function() {
+            console.log('error')
+            });
+}
 })
+function loadInfo() {
+    localStorage.setItem('name', nameFirst.value)
+    localStorage.setItem('lastName', surname.value)
+    localStorage.setItem('dni', dni.value)
+    localStorage.setItem('address', address.value)
+    localStorage.setItem('zip', postalCode.value)
+    localStorage.setItem('phone', telephone.value)
+    localStorage.setItem('city', town.value)
+    localStorage.setItem('email', emailInput.value)
+    localStorage.setItem('dob', born)
+    localStorage.setItem('password', passwordInput.value)
+}
+window.onload = function() {
+    nameFirst.value = localStorage.getItem('name');
+    surname.value = localStorage.getItem('lastName');
+    dni.value = localStorage.getItem('dni');
+    address.value = localStorage.getItem('address');
+    postalCode.value = localStorage.getItem('zip');
+    telephone.value = localStorage.getItem('phone');
+    town.value = localStorage.getItem('city');
+    emailInput.value = localStorage.getItem('email');
+    bornDate.value = changeFormat(localStorage.getItem('dob'));
+    passwordInput.value = localStorage.getItem('password');
+}
 
+function changeFormat(aux) {
+    if (aux === null) {
+        return '';
+    }
+    else { 
+        var yyyy = aux.substring(6, 10);
+        var mm = aux.substring(0, 2);
+        var dd = aux.substring(3, 5);
+        var newDate = yyyy + "-" + mm + "-" + dd;
+        return newDate;
+    }
+}
 
- 
 
 
 
