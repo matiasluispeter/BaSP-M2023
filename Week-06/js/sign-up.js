@@ -1,3 +1,6 @@
+var download = [];
+
+
 // Back
 var backImage = document.querySelector('.back');
 backImage.addEventListener('click', function() {
@@ -357,6 +360,7 @@ function validateRepeatPassword() {
     msjRepeatPassword.textContent = '';
 }
 
+
 //form
 var form = document.getElementById('form')
 form.addEventListener("submit", function(e) {
@@ -398,8 +402,8 @@ form.addEventListener("submit", function(e) {
                 .then(function (response) {
                 return response.json();
                 })
-                .then(function(data) {
-                alert(data.msg);
+                .then(function(data) { 
+                array.push(data)
                 })
                 .catch(function() {
                 alert('error');
@@ -407,6 +411,7 @@ form.addEventListener("submit", function(e) {
     }
 })
 
+nameValue = 'matias';
 
 
 

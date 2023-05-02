@@ -58,15 +58,16 @@ function validateAlphanumeric(str) {
 //name
 var nameFirst = document.getElementById('nameFirst');
 var msj = document.getElementById('false1');
-console.log(nameFirst)
+
 
 nameFirst.addEventListener('blur', validateName)
 nameFirst.addEventListener('focus', function() {
     msj.textContent = ''
 nameFirst.classList.remove('border')
 })
+var nameValue;
   function validateName(){
-    var nameValue = nameFirst.value.trim();
+    nameValue = nameFirst.value.trim();
     var isValid = true;
    
     if (!validateLetters(nameValue) || nameValue.length < 3) {
@@ -89,9 +90,9 @@ surname.addEventListener('focus', function() {
     msjSurname.textContent = ''
     surname.classList.remove('border')
 })
-
+var surnameValue;
 function validateSurname(){
-    var surnameValue = surname.value.trim();
+    surnameValue = surname.value.trim();
     var isValid = true;
    
     if (!validateLetters(surnameValue) || surnameValue.length < 3) {
@@ -109,16 +110,16 @@ function validateSurname(){
 //dni
 var dni = document.getElementById('DNI')
 var msjdni = document.getElementById('false3')
-console.log(dni)
+
 
 dni.addEventListener ('blur', validateDni)
 dni.addEventListener ('focus', function() {
     msjdni.textContent = ''
     dni.classList.remove('border')
 })
-
+var dniValue;
 function validateDni() {
-    var dniValue = dni.value;
+    dniValue = dni.value;
 
     var isValid = true
     if (validateNumbers(dniValue) || dniValue.length !==8) {
@@ -126,8 +127,7 @@ function validateDni() {
         dni.classList.add ('border')
         msjdni.textContent = 'Only numbers and must have more than 7 numbers'
     }
-    if (dniValue == 8 || (dniValue = '')) {
-        isValid = true
+    else {
         dni.classList.remove('border')
         msjdni.textContent = ''
     }
@@ -143,8 +143,9 @@ bornDate.addEventListener('focus', function() {
   bornDate.classList.remove('false', 'border');
 });
 
+var bornDateValue;
 function validateBornDate() {
-  var bornDateValue = bornDate.value;
+  bornDateValue = bornDate.value;
 
   if (!bornDateValue) {
     bornDate.classList.add('border');
@@ -155,9 +156,14 @@ function validateBornDate() {
     bornDate.classList.add('border');
     msjBornDate.textContent = 'You must enter a valid year (1900-2100)';
     return;
+
   } else {
     bornDate.classList.remove('border');
     msjBornDate.textContent = '';
+    var year = bornDateValue.substring(0,4);
+    var month = bornDateValue.substring(5,7);
+    var day = bornDateValue.substring(8,10);
+    bornDateValue = month + '/' + day + '/' + year; 
     }
 }
 
@@ -170,18 +176,18 @@ telephone.addEventListener('focus', function() {
   msjTelephone.textContent = '';
   telephone.classList.remove('border');
 });
-
+var telephoneValue;
 function validateTelephone() {
-  var telephoneValue = telephone.value;
-  if (validateNumbers(telephoneValue) || telephoneValue.length !== 10) {
+    telephoneValue = telephone.value;
+    if (validateNumbers(telephoneValue) || telephoneValue.length !== 10) {
     isValid = false
     telephone.classList.add('border');
     msjTelephone.textContent = 'Only numbers and must have 10 numbers';
-  } else {
+    } else {
     isValid = true
     telephone.classList.remove('border');
     msjTelephone.textContent = '';
-  }
+    }
 }
 
 //address
@@ -193,9 +199,9 @@ address.addEventListener('focus', function() {
     msjAddress.textContent = '';
     address.classList.remove('border');
 });
-
+var addressValue;
 function validateAddress() {
-    var addressValue = address.value;
+    addressValue = address.value;
     var spaceIndex = addressValue.indexOf(' ');
     console.log (spaceIndex)
 
@@ -221,9 +227,9 @@ town.addEventListener('focus', function() {
     msjTown.textContent = '';
     town.classList.remove('border');
 });
-    
+var townValue;
 function validateTown() {
-    var townValue = town.value;
+    townValue = town.value;
     var isValid = true
     if (!validateAlphanumeric(townValue) || townValue.length < 3 || (townValue == '')) {
         isValid = false
@@ -247,9 +253,9 @@ postalCode.addEventListener('focus', function() {
     falsePostalCode.textContent = '';
     postalCode.classList.remove('red');
 });
-
+var postalCodeValue;
 function validatePostalCode() {
-    var postalCodeValue = postalCode.value;
+    postalCodeValue = postalCode.value;
     var isValid = true
     if (validateNumbers(postalCodeValue) || postalCodeValue.length < 4 || postalCodeValue.length > 5) {
         isValid = false
@@ -270,9 +276,9 @@ emailInput.addEventListener('focus', function() {
   msjEmail.textContent = '';
   emailInput.classList.remove('border');
 });
-
+var emailValue;
 function validateEmail() {
-    var emailValue = emailInput.value;
+    emailValue = emailInput.value;
     var isValid = true
     if (!emailValue) {
         isValid = false
@@ -297,12 +303,12 @@ var msjPassword = document.getElementById('false10');
 
 passwordInput.addEventListener('blur', validatePassword);
 passwordInput.addEventListener('focus', function() {
-  msjPassword.textContent = '';
-  passwordInput.classList.remove('border');
+    msjPassword.textContent = '';
+    passwordInput.classList.remove('border');
 });
-
+var passwordValue;
 function validatePassword() {
-    var passwordValue = passwordInput.value;
+    passwordValue = passwordInput.value;
     var isValid = true
     if (passwordValue.length == 0) {
         isValid = false
@@ -334,10 +340,10 @@ repeatPasswordInput.addEventListener('focus', function() {
   msjRepeatPassword.textContent = '';
   repeatPasswordInput.classList.remove('red', 'border');
 });
-
+var repeatPasswordValue;
 function validateRepeatPassword() {
-    var passwordValue = passwordInput.value;
-    var repeatPasswordValue = repeatPasswordInput.value;
+    passwordValue = passwordInput.value;
+    repeatPasswordValue = repeatPasswordInput.value;
     var isValid = true
     if (!repeatPasswordValue) {
         isValid = false
@@ -386,8 +392,31 @@ form.addEventListener("submit", function(e) {
             '\n password: '+passwordInput.value + ' ' + 
             '\n repeatpassword: '+repeatPasswordInput.value
             )
+            var url = 'https://api-rest-server.vercel.app/signup?email=' + emailValue + '&password=' + passwordValue + 
+            '&name=' + nameValue + '&lastName=' + surnameValue + '&dni=' + dniValue + '&address=' + addressValue +
+            '&zip=' + postalCodeValue + '&phone=' + telephoneValue + '&city=' + townValue +
+            '&dob=' + bornDateValue; 
+
+
+            fetch(url) 
+                .then(function (response) {
+                return response.json();
+                })
+                .then(function(info) { 
+                console.log(info);
+                if (info.hasOwnProperty(data)) {
+                    
+
+                }
+                })
+                .catch(function() {
+                alert('error');
+                });
     }
 })
+
+
+ 
 
 
 

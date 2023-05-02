@@ -18,6 +18,10 @@ footer and the font size in the aside. In addition to this, i did the correction
 ## In the week 06
 [GitHub Pages](https://matiasluispeter.github.io/BaSP-M2023/Week-06/Views/index.html)
 I did the sign up and log in html and css to fix. I reusesed some class from the landing page from week 04 and connect the landing page width the sign up and log in. On the other hand i did a Java Script project to the log in and sign up, here i developed all the requerements which are in the "requierements" folder into the week 06 folder. This last folder have a css, a js, a requierements and a views. During the week i commit and pushed on GitHub.
+## In the week 07 
+[GitHub Pages](https://matiasluispeter.github.io/BaSP-M2023/Week-07/Views/index.html)
+I developed a request HTTP for the sign up and the log in js. If any of the inputs are wrong, the request don't carry on. the data of reques are send as query-params. I developed an alert saing that the solicitation was correct, and the you can see the information about the request. In the sign up i save the data into the local Storage.
+If the inputs are incorrected the alert said "incorrect data" and the alert said wht was wrong.
 ## Matías Peter
 
  
